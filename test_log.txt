@@ -1,3 +1,2 @@
 >>>> [1] polygon_1 <<<<
-pixel (1 0): expected 255 0 0 got 255 255 255
 >>>> [2] polygon_2 <<<<

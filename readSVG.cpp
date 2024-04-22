@@ -9,6 +9,25 @@ using namespace tinyxml2;
 
 namespace svg
 {
+    vector<Point> parse_points(const string& points_str) {
+        vector<Point> points;
+        stringstream ss(points_str);
+        char c;
+        Point p;
+
+        // Read each point, ignoring commas
+        while (ss >> p.x) {
+            ss >> c;  // This should read the comma separator
+            if (ss.peek() == ',') ss.ignore();  // If next character is a comma, ignore it
+            ss >> p.y;
+            points.push_back(p);
+            // Skip all consecutive commas and whitespace
+            while (isspace(ss.peek()) || ss.peek() == ',') ss.ignore();
+        }
+
+        return points;
+    }
+
     void readSVG(const string& svg_file, Point& dimensions, vector<SVGElement *>& svg_elements)
     {
         XMLDocument doc;
@@ -102,13 +121,7 @@ namespace svg
             else if (nodeName == "polygon")
             {
                 string points_str = child->Attribute("points");
-                vector<Point> points;
-                stringstream ss(points_str);
-                char c;
-                Point p;
-                while (ss >> p.x >> c >> p.y) {
-                    points.push_back(p);
-                }
+                vector<Point> points = parse_points(points_str);
                 string fill = child->Attribute("fill");
                 Color fillColor = parse_color(fill);
                 svg_elements.push_back(new Polygon(fillColor, points));
