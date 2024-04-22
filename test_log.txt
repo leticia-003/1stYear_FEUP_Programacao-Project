@@ -33,11 +33,8 @@ pixel (0 0): expected 255 0 0 got 255 255 255
 >>>> [20] polygon_2 <<<<
 pixel (50 50): expected 255 255 0 got 255 255 255
 >>>> [21] polyline_1 <<<<
-pixel (1 1): expected 0 0 255 got 255 255 255
 >>>> [22] polyline_2 <<<<
-pixel (10 10): expected 0 0 255 got 255 255 255
 >>>> [23] polyline_3 <<<<
-pixel (220 306): expected 122 51 111 got 255 255 255
 >>>> [24] rect_1 <<<<
 pixel (0 0): expected 0 0 255 got 255 255 255
 >>>> [25] rect_2 <<<<
@@ -59,7 +56,7 @@ pixel (16 143): expected 0 0 255 got 255 255 255
 >>>> [33] rotate_polyline <<<<
 pixel (16 23): expected 0 255 0 got 255 255 255
 >>>> [34] rotate_polyline_with_origin <<<<
-pixel (10 10): expected 0 0 255 got 255 255 255
+pixel (10 11): expected 0 0 255 got 255 255 255
 >>>> [35] rotate_rect <<<<
 pixel (6 252): expected 0 0 255 got 255 255 255
 >>>> [36] rotate_rect_with_origin <<<<
@@ -81,7 +78,7 @@ pixel (25 25): expected 255 0 0 got 255 255 255
 >>>> [44] scale_polygon_with_origin <<<<
 pixel (50 50): expected 255 255 0 got 255 255 255
 >>>> [45] scale_polyline <<<<
-pixel (20 20): expected 255 0 0 got 255 255 255
+pixel (20 20): expected 255 0 0 got 0 0 0
 >>>> [46] scale_polyline_with_origin <<<<
 pixel (20 160): expected 0 255 0 got 255 255 255
 >>>> [47] scale_rect <<<<
@@ -99,7 +96,7 @@ pixel (51 1): expected 255 0 0 got 255 255 255
 >>>> [53] translate_polygon <<<<
 pixel (0 0): expected 255 0 0 got 255 255 255
 >>>> [54] translate_polyline <<<<
-pixel (10 10): expected 0 0 255 got 255 255 255
+pixel (10 10): expected 0 0 255 got 255 255 0
 >>>> [55] translate_rect <<<<
 pixel (5 5): expected 0 255 0 got 255 255 255
 >>>> [56] use_1 <<<<

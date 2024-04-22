@@ -59,5 +59,20 @@ namespace svg
         Point center;
         int radius;
     };
+
+    class Polyline : public SVGElement
+    {
+    public:
+        Polyline(const Color& stroke, const std::vector<Point>& points);
+        void draw(PNGImage &img) const override;
+        void translate(const Point &translation) override;
+        void scale(const Point &origin, int scaling_factor) override;
+        void rotate(const Point &origin, int degrees) override;
+
+    private:
+        Color stroke;
+        std::vector<Point> points;
+    };
+
 }
 #endif

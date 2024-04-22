@@ -67,4 +67,47 @@ namespace svg
         center = center.rotate(origin, degrees);
     }
 
+
+    //Polyline
+    Polyline::Polyline(const Color &stroke, const std::vector<Point> &points)
+            : stroke(stroke), points(points)
+    {
+    }
+
+    void Polyline::draw(PNGImage& img) const {
+        // Draw polyline
+        for (size_t i = 0; i < points.size() - 1; ++i) {
+            img.draw_line(points[i], points[i + 1], stroke);
+        }
+    }
+
+    void Polyline::translate(const Point &translation)
+    {
+        // Translate each point of the polyline
+        for (Point &p : points)
+        {
+            p = p.translate(translation);
+        }
+    }
+
+    void Polyline::scale(const Point &origin, int scaling_factor)
+    {
+        // Scale each point of the polyline from the origin
+        for (Point &p : points)
+        {
+            p = p.scale(origin, scaling_factor);
+        }
+    }
+
+    void Polyline::rotate(const Point &origin, int degrees)
+    {
+        // Rotate each point of the polyline around the origin
+        for (Point &p : points)
+        {
+            p = p.rotate(origin, degrees);
+        }
+    }
+
+
+
 }

@@ -2,6 +2,7 @@
 #include <iostream>
 #include "SVGElements.hpp"
 #include "external/tinyxml2/tinyxml2.h"
+#include <sstream>
 
 using namespace std;
 using namespace tinyxml2;
@@ -66,6 +67,23 @@ namespace svg
 
                 // Create Circle and store it
                 svg_elements.push_back(new Circle(fillColor, center, r));
+            }
+
+            else if (nodeName == "polyline")
+            {
+                string points_str = child->Attribute("points");
+                vector<Point> points;
+                stringstream ss(points_str);
+                while (!ss.eof())
+                {
+                    Point p;
+                    char c;
+                    ss >> p.x >> c >> p.y;
+                    points.push_back(p);
+                }
+                string stroke = child->Attribute("stroke");
+                Color strokeColor = parse_color(stroke);
+                svg_elements.push_back(new Polyline(strokeColor, points));
             }
 
             // Move to the next child
