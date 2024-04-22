@@ -5,7 +5,7 @@
 
 - up202108886 Jorge Restivo
 - up202108877 Letícia Coelho
-- upXXXXX Sara Azevedo
+- up202006902 Sara Azevedo
 
 
 ## Accomplished tasks
