@@ -23,6 +23,54 @@ namespace svg
         dimensions.y = xml_elem->IntAttribute("height");
         
         // TODO complete code -->
+        // Parsing ellipse elements
+        XMLElement* child = xml_elem->FirstChildElement();
+        while (child != nullptr)
+        {
+            const string nodeName = child->Name();
+
+            // Determine SVG element type
+            if (nodeName == "ellipse")
+            {
+                int cx = child->IntAttribute("cx");
+                int cy = child->IntAttribute("cy");
+                int rx = child->IntAttribute("rx");
+                int ry = child->IntAttribute("ry");
+                string fill = child->Attribute("fill");
+                Color fillColor = parse_color(fill);
+
+                // Create center and radius points
+                Point center;
+                center.x = cx;
+                center.y = cy;
+
+                Point radius;
+                radius.x = rx;
+                radius.y = ry;
+
+                // Create Ellipse and store it
+                Ellipse* ellipse = new Ellipse(fillColor, center, radius);
+                svg_elements.push_back(ellipse);
+            }
+
+            else if (nodeName == "circle")
+            {
+                int cx = child->IntAttribute("cx");
+                int cy = child->IntAttribute("cy");
+                int r = child->IntAttribute("r");
+                string fill = child->Attribute("fill");
+                Color fillColor = parse_color(fill);
+
+                // Create center point
+                Point center{cx, cy};
+
+                // Create Circle and store it
+                svg_elements.push_back(new Circle(fillColor, center, r));
+            }
+
+            // Move to the next child
+            child = child->NextSiblingElement();
+        }
         
     }
 }
