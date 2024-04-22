@@ -1,5 +1,5 @@
 #include "SVGElements.hpp"
-
+#include <iostream>
 namespace svg
 {
     // These must be defined!
@@ -140,5 +140,86 @@ namespace svg
         end = end.rotate(origin, degrees);
     }
 
+    //Polygon
+    Polygon::Polygon(const Color &fill, const std::vector<Point> &points)
+            : fill(fill), points(points)
+    {
+    }
+
+    void Polygon::draw(PNGImage &img) const
+    {
+        // Construct a vector of Point for drawing the polygon
+        std::vector<Point> points_for_drawing = points; // Assuming points is a vector of Point
+
+        // Draw the polygon
+        img.draw_polygon(points_for_drawing, fill);
+    }
+
+
+    void Polygon::translate(const Point &translation)
+    {
+        // Translate each point of the polygon
+        for (Point &p : points)
+        {
+            p = p.translate(translation);
+        }
+    }
+
+    void Polygon::scale(const Point &origin, int scaling_factor)
+    {
+        // Scale each point of the polygon from the origin
+        for (Point &p : points)
+        {
+            p = p.scale(origin, scaling_factor);
+        }
+    }
+
+    void Polygon::rotate(const Point &origin, int degrees)
+    {
+        // Rotate each point of the polygon around the origin
+        for (Point &p : points)
+        {
+            p = p.rotate(origin, degrees);
+        }
+    }
+
+    //Rectangle
+    Rectangle::Rectangle(const Color &fill, const Point &upper_left, int width, int height)
+            : fill(fill), upper_left(upper_left), width(width), height(height)
+    {
+    }
+
+    void Rectangle::draw(PNGImage &img) const
+    {
+        // Construct the points for drawing the rectangle
+        std::vector<Point> points_for_drawing;
+        points_for_drawing.emplace_back(Point{upper_left.x, upper_left.y});
+        points_for_drawing.emplace_back(Point{upper_left.x + width, upper_left.y});
+        points_for_drawing.emplace_back(Point{upper_left.x + width, upper_left.y + height});
+        points_for_drawing.emplace_back(Point{upper_left.x, upper_left.y + height});
+
+        // Draw the rectangle
+        img.draw_polygon(points_for_drawing, fill);
+    }
+
+    void Rectangle::translate(const Point &translation)
+    {
+        // Translate the upper left corner of the rectangle
+        upper_left = upper_left.translate(translation);
+    }
+
+    void Rectangle::scale(const Point &origin, int scaling_factor)
+    {
+        // Scale the width and height of the rectangle from the origin
+        upper_left = upper_left.scale(origin, scaling_factor);
+        width *= scaling_factor;
+        height *= scaling_factor;
+    }
+
+    void Rectangle::rotate(const Point &origin, int degrees)
+    {
+        // Rotate the upper left corner of the rectangle around the origin
+        upper_left = upper_left.rotate(origin, degrees);
+    }
 
 }

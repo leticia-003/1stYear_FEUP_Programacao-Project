@@ -88,5 +88,35 @@ namespace svg
         Point end;
     };
 
+    class Polygon : public SVGElement {
+    public:
+        Polygon(const Color &fill, const std::vector<Point> &points);
+        void draw(PNGImage& img) const override;
+        void translate(const Point &translation) override;
+        void scale(const Point &origin, int scaling_factor) override;
+        void rotate(const Point &origin, int degrees) override;
+
+    private:
+        Color fill;
+        std::vector<Point> points;
+    };
+
+    class Rectangle : public SVGElement
+    {
+    public:
+        Rectangle(const Color &fill, const Point &upper_left, int width, int height);
+        void draw(PNGImage &img) const override;
+        void translate(const Point &translation) override;
+        void scale(const Point &origin, int scaling_factor) override;
+        void rotate(const Point &origin, int degrees) override;
+
+    private:
+        Color fill;
+        Point upper_left;
+        int width;
+        int height;
+    };
+
+
 }
 #endif

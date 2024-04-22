@@ -99,6 +99,33 @@ namespace svg
                 svg_elements.push_back(new Line(strokeColor, start, end));
             }
 
+            else if (nodeName == "polygon")
+            {
+                string points_str = child->Attribute("points");
+                vector<Point> points;
+                stringstream ss(points_str);
+                char c;
+                Point p;
+                while (ss >> p.x >> c >> p.y) {
+                    points.push_back(p);
+                }
+                string fill = child->Attribute("fill");
+                Color fillColor = parse_color(fill);
+                svg_elements.push_back(new Polygon(fillColor, points));
+            }
+
+            else if (nodeName == "rect")
+            {
+                int x = child->IntAttribute("x");
+                int y = child->IntAttribute("y");
+                int width = child->IntAttribute("width");
+                int height = child->IntAttribute("height");
+                string fill = child->Attribute("fill");
+                Color fillColor = parse_color(fill);
+                svg_elements.push_back(new Rectangle(fillColor, Point{x, y}, width, height));
+            }
+
+
             // Move to the next child
             child = child->NextSiblingElement();
         }
