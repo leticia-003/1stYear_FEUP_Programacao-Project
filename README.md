@@ -3,11 +3,9 @@
 
 ## Group elements
 
-Identify all group elements (numbers and names).
-
-- upXXXXX Name of element 1
-- upXXXXX Name of element 2
-- upXXXXX Name of element 3
+- up202108886 Jorge Restivo
+- up202108877 Letícia Coelho
+- upXXXXX Sara Azevedo
 
 
 ## Accomplished tasks
