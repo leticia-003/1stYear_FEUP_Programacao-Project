@@ -85,6 +85,19 @@ namespace svg
                 Color strokeColor = parse_color(stroke);
                 svg_elements.push_back(new Polyline(strokeColor, points));
             }
+            else if (nodeName == "line")
+            {
+                int x1 = child->IntAttribute("x1");
+                int y1 = child->IntAttribute("y1");
+                int x2 = child->IntAttribute("x2");
+                int y2 = child->IntAttribute("y2");
+                string stroke = child->Attribute("stroke");
+                Color strokeColor = parse_color(stroke);
+
+                Point start{x1, y1};
+                Point end{x2, y2};
+                svg_elements.push_back(new Line(strokeColor, start, end));
+            }
 
             // Move to the next child
             child = child->NextSiblingElement();

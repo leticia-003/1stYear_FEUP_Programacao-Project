@@ -108,6 +108,37 @@ namespace svg
         }
     }
 
+    //Line
+    Line::Line(const Color& stroke, const Point& start, const Point& end)
+            : stroke(stroke), start(start), end(end)
+    {
+    }
+
+    void Line::draw(PNGImage& img) const {
+        // Draw line
+        img.draw_line(start, end, stroke);
+    }
+
+    void Line::translate(const Point &translation)
+    {
+        // Translate the start and end points of the line
+        start = start.translate(translation);
+        end = end.translate(translation);
+    }
+
+    void Line::scale(const Point &origin, int scaling_factor)
+    {
+        // Scale the start and end points of the line from the origin
+        start = start.scale(origin, scaling_factor);
+        end = end.scale(origin, scaling_factor);
+    }
+
+    void Line::rotate(const Point &origin, int degrees)
+    {
+        // Rotate the start and end points of the line around the origin
+        start = start.rotate(origin, degrees);
+        end = end.rotate(origin, degrees);
+    }
 
 
 }

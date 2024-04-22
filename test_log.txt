@@ -1,7 +1,6 @@
 >>>> [1] batman <<<<
 pixel (0 0): expected 13 67 111 got 255 255 255
 >>>> [2] batman_2 <<<<
-pixel (100 100): expected 255 0 0 got 255 255 255
 >>>> [3] blank_1 <<<<
 >>>> [4] blank_2 <<<<
 >>>> [5] circle_1 <<<<
@@ -23,9 +22,7 @@ pixel (10 10): expected 255 0 0 got 255 255 255
 >>>> [15] group_7 <<<<
 pixel (36 80): expected 255 0 0 got 255 255 255
 >>>> [16] line_1 <<<<
-pixel (1 1): expected 0 255 0 got 255 255 255
 >>>> [17] line_2 <<<<
-pixel (0 0): expected 0 0 0 got 255 255 255
 >>>> [18] lion <<<<
 pixel (0 0): expected 0 255 0 got 255 255 255
 >>>> [19] polygon_1 <<<<
@@ -46,7 +43,7 @@ pixel (21 212): expected 255 0 0 got 255 255 255
 >>>> [28] rotate_circle_with_origin <<<<
 pixel (100 300): expected 0 0 255 got 240 240 240
 >>>> [29] rotate_line <<<<
-pixel (0 0): expected 255 255 0 got 255 255 255
+pixel (0 1): expected 255 0 0 got 255 255 255
 >>>> [30] rotate_line_with_origin <<<<
 pixel (41 66): expected 0 255 0 got 255 255 255
 >>>> [31] rotate_polygon <<<<
@@ -70,9 +67,9 @@ pixel (20 60): expected 255 0 0 got 255 255 255
 >>>> [40] scale_ellipse_with_origin <<<<
 pixel (100 300): expected 0 0 255 got 255 255 255
 >>>> [41] scale_line <<<<
-pixel (100 100): expected 255 0 0 got 255 255 255
+pixel (50 50): expected 255 255 255 got 0 255 0
 >>>> [42] scale_line_with_origin <<<<
-pixel (50 50): expected 255 0 0 got 255 255 255
+pixel (50 50): expected 255 0 0 got 0 255 0
 >>>> [43] scale_polygon <<<<
 pixel (25 25): expected 255 0 0 got 255 255 255
 >>>> [44] scale_polygon_with_origin <<<<
@@ -92,7 +89,7 @@ pixel (0 25): expected 0 255 0 got 255 255 0
 >>>> [51] translate_ellipse <<<<
 pixel (5 25): expected 0 255 0 got 0 0 255
 >>>> [52] translate_line <<<<
-pixel (51 1): expected 255 0 0 got 255 255 255
+pixel (1 1): expected 255 255 255 got 0 255 0
 >>>> [53] translate_polygon <<<<
 pixel (0 0): expected 255 0 0 got 255 255 255
 >>>> [54] translate_polyline <<<<

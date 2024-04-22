@@ -74,5 +74,19 @@ namespace svg
         std::vector<Point> points;
     };
 
+    class Line : public SVGElement {
+    public:
+        Line(const Color& stroke, const Point& start, const Point& end);
+        void draw(PNGImage& img) const override;
+        void translate(const Point &translation) override;
+        void scale(const Point &origin, int scaling_factor) override;
+        void rotate(const Point &origin, int degrees) override;
+
+    private:
+        Color stroke;
+        Point start;
+        Point end;
+    };
+
 }
 #endif
