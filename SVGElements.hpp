@@ -18,6 +18,10 @@ namespace svg
     */
     class SVGElement
     {
+    protected:
+        std::vector<std::function<void()>> transformations;
+        Point transformOrigin;
+
     public:
         /*! 
             * @brief Constructor of SVGElement
@@ -55,6 +59,20 @@ namespace svg
             * @param degrees int value
         */
         virtual void rotate(const Point &origin, int degrees) = 0;
+
+        void setTransformOrigin(const Point& origin) {
+            transformOrigin = origin;
+        }
+
+        void addTransformation(const std::function<void()>& transformation) {
+            transformations.push_back(transformation);
+        }
+
+        void applyTransformations() {
+            for (const auto& transform : transformations) {
+                transform();
+            }
+        }
     };
 
     // Declaration of namespace functions
@@ -119,6 +137,7 @@ namespace svg
         */
         void rotate(const Point &origin, int degrees) override;
 
+
     private:
         /*!
             * @brief fill
@@ -137,6 +156,7 @@ namespace svg
             * The radius is a Point object that stores the x and y coordinates.
         */
         Point radius;
+
     };
 
     /*!
@@ -178,9 +198,6 @@ namespace svg
         */
         void rotate(const Point &origin, int degrees) override;
 
-        void setTransformOrigin(const Point& origin);
-        void addTransformation(const std::function<void()>& transformation);
-        void applyTransformations();
 
     private:
         /*!
@@ -200,8 +217,6 @@ namespace svg
         */
         int radius;
 
-        Point transformOrigin;
-        std::vector<std::function<void()>> transformations;
     };
 
     /*!
@@ -243,9 +258,6 @@ namespace svg
         */
         void rotate(const Point &origin, int degrees) override;
 
-        void applyTransformations();
-        void setTransformOrigin(const Point& origin);
-        void addTransformation(const std::function<void()>& transformation);
 
     private:
         /*!
@@ -260,8 +272,6 @@ namespace svg
         */
         std::vector<Point> points;
 
-        Point transformOrigin;
-        std::vector<std::function<void()>> transformations;
     };
 
     /*!
@@ -302,9 +312,6 @@ namespace svg
         */
         void rotate(const Point &origin, int degrees) override;
 
-        void applyTransformations();
-        void setTransformOrigin(const Point& origin);
-        void addTransformation(const std::function<void()>& transformation);
 
     private:
         /*!
@@ -325,8 +332,6 @@ namespace svg
         */
         Point end;
 
-        Point transformOrigin;
-        std::vector<std::function<void()>> transformations;
     };
 
     /*!
@@ -367,10 +372,6 @@ namespace svg
         */
         void rotate(const Point &origin, int degrees) override;
 
-        void applyTransformations();
-        void setTransformOrigin(const Point& origin);
-        void addTransformation(const std::function<void()>& transformation);
-
     private:
         /*!
             * @brief fill
@@ -384,8 +385,6 @@ namespace svg
         */
         std::vector<Point> points;
 
-        Point transformOrigin;
-        std::vector<std::function<void()>> transformations;
     };
 
     /*!
@@ -449,6 +448,7 @@ namespace svg
             * This variable stores the height of the Rectangle.
         */
         int height;
+
     };
 
 }

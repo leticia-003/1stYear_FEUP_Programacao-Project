@@ -109,6 +109,9 @@ namespace svg
 
                 // Create Ellipse and store it
                 Ellipse* ellipse = new Ellipse(fillColor, center, radius);
+                ellipse->setTransformOrigin(transformOrigin);
+                parseTransform(*ellipse, transform, transformOrigin);
+                ellipse->applyTransformations();
                 svg_elements.push_back(ellipse);
             }
 
@@ -192,7 +195,13 @@ namespace svg
                 Color fillColor = parse_color(fill);
                 width -= 1;
                 height -= 1;
-                svg_elements.push_back(new Rectangle(fillColor, Point{x, y}, width, height));
+
+                Rectangle* rectangle = new Rectangle(fillColor, Point{x, y}, width, height);
+                rectangle->setTransformOrigin(transformOrigin);
+                parseTransform(*rectangle, transform, transformOrigin);
+                rectangle->applyTransformations();
+
+                svg_elements.push_back(rectangle);
             }
 
 
