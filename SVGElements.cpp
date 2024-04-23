@@ -226,6 +226,20 @@ namespace svg
         }
     }
 
+    void Polygon::applyTransformations() {
+        for (const auto& transform : transformations) {
+            transform();
+        }
+    }
+
+    void Polygon::setTransformOrigin(const Point& origin) {
+        transformOrigin = origin;
+    }
+
+    void Polygon::addTransformation(const std::function<void()>& transformation) {
+        transformations.push_back(transformation);
+    }
+
     //Rectangle
     Rectangle::Rectangle(const Color &fill, const Point &upper_left, int width, int height)
             : fill(fill), upper_left(upper_left), width(width), height(height)

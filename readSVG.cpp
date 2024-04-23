@@ -172,7 +172,14 @@ namespace svg
                 vector<Point> points = parse_points(points_str);
                 string fill = child->Attribute("fill");
                 Color fillColor = parse_color(fill);
-                svg_elements.push_back(new Polygon(fillColor, points));
+
+                Polygon* polygon = new Polygon(fillColor, points);
+
+                polygon->setTransformOrigin(transformOrigin);
+                parseTransform(*polygon, transform, transformOrigin);
+                polygon->applyTransformations();
+
+                svg_elements.push_back(polygon);
             }
 
             else if (nodeName == "rect")

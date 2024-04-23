@@ -367,6 +367,10 @@ namespace svg
         */
         void rotate(const Point &origin, int degrees) override;
 
+        void applyTransformations();
+        void setTransformOrigin(const Point& origin);
+        void addTransformation(const std::function<void()>& transformation);
+
     private:
         /*!
             * @brief fill
@@ -379,6 +383,9 @@ namespace svg
             * The points is a vector of Point objects that stores the x and y coordinates.
         */
         std::vector<Point> points;
+
+        Point transformOrigin;
+        std::vector<std::function<void()>> transformations;
     };
 
     /*!

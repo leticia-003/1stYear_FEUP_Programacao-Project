@@ -36,9 +36,7 @@ pixel (36 80): expected 255 0 0 got 255 255 255
 >>>> [29] rotate_line <<<<
 >>>> [30] rotate_line_with_origin <<<<
 >>>> [31] rotate_polygon <<<<
-pixel (50 50): expected 255 255 255 got 0 0 255
 >>>> [32] rotate_polygon_with_origin <<<<
-pixel (16 143): expected 0 0 255 got 255 255 255
 >>>> [33] rotate_polyline <<<<
 >>>> [34] rotate_polyline_with_origin <<<<
 >>>> [35] rotate_rect <<<<
@@ -54,9 +52,7 @@ pixel (100 300): expected 0 0 255 got 255 255 255
 >>>> [41] scale_line <<<<
 >>>> [42] scale_line_with_origin <<<<
 >>>> [43] scale_polygon <<<<
-pixel (25 25): expected 255 0 0 got 0 255 0
 >>>> [44] scale_polygon_with_origin <<<<
-pixel (50 50): expected 255 255 0 got 255 0 0
 >>>> [45] scale_polyline <<<<
 >>>> [46] scale_polyline_with_origin <<<<
 >>>> [47] scale_rect <<<<
@@ -64,7 +60,7 @@ pixel (0 20): expected 255 0 0 got 255 255 255
 >>>> [48] scale_rect_with_origin <<<<
 pixel (55 50): expected 0 255 0 got 255 255 255
 >>>> [49] transform_several <<<<
-pixel (0 0): expected 255 0 0 got 0 0 255
+Assertion failed: (y >= 0 && y < height_), function at, file PNGImage.cpp, line 63.
 >>>> [50] translate_circle <<<<
 pixel (0 25): expected 0 255 0 got 255 0 0
 >>>> [51] translate_ellipse <<<<
@@ -72,7 +68,7 @@ pixel (5 25): expected 0 255 0 got 0 0 255
 >>>> [52] translate_line <<<<
 pixel (51 1): expected 255 0 0 got 0 255 0
 >>>> [53] translate_polygon <<<<
-pixel (0 0): expected 255 0 0 got 0 0 255
+Assertion failed: (y >= 0 && y < height_), function at, file PNGImage.cpp, line 63.
 >>>> [54] translate_polyline <<<<
 Assertion failed: (y >= 0 && y < height_), function at, file PNGImage.cpp, line 63.
 >>>> [55] translate_rect <<<<
