@@ -178,6 +178,10 @@ namespace svg
         */
         void rotate(const Point &origin, int degrees) override;
 
+        void setTransformOrigin(const Point& origin);
+        void addTransformation(const std::function<void()>& transformation);
+        void applyTransformations();
+
     private:
         /*!
             * @brief fill
@@ -195,6 +199,9 @@ namespace svg
             * This variable stores the radius of the Circle.
         */
         int radius;
+
+        Point transformOrigin;
+        std::vector<std::function<void()>> transformations;
     };
 
     /*!

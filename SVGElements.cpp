@@ -67,6 +67,20 @@ namespace svg
         center = center.rotate(origin, degrees);
     }
 
+    void Circle::setTransformOrigin(const Point& origin) {
+        transformOrigin = origin;
+    }
+
+    void Circle::addTransformation(const std::function<void()>& transformation) {
+        transformations.push_back(transformation);
+    }
+
+    void Circle::applyTransformations() {
+        for (const auto& transform : transformations) {
+            transform();
+        }
+    }
+
 
     //Polyline
     Polyline::Polyline(const Color &stroke, const std::vector<Point> &points)
