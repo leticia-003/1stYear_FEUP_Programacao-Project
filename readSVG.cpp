@@ -141,7 +141,13 @@ namespace svg
                 }
                 string stroke = child->Attribute("stroke");
                 Color strokeColor = parse_color(stroke);
-                svg_elements.push_back(new Polyline(strokeColor, points));
+                Polyline* polyline = new Polyline(strokeColor, points);
+
+                polyline->setTransformOrigin(transformOrigin);
+                parseTransform(*polyline, transform, transformOrigin);
+                polyline->applyTransformations();
+
+                svg_elements.push_back(polyline);
             }
             else if (nodeName == "line") {
                 int x1 = child->IntAttribute("x1");
@@ -159,7 +165,6 @@ namespace svg
 
                 svg_elements.push_back(line);
             }
-
 
             else if (nodeName == "polygon")
             {

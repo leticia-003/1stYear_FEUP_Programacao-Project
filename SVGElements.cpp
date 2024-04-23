@@ -122,6 +122,20 @@ namespace svg
         }
     }
 
+    void Polyline::applyTransformations() {
+        for (const auto& transform : transformations) {
+            transform();
+        }
+    }
+
+    void Polyline::setTransformOrigin(const Point& origin) {
+        transformOrigin = origin;
+    }
+
+    void Polyline::addTransformation(const std::function<void()>& transformation) {
+        transformations.push_back(transformation);
+    }
+
     //Line
     Line::Line(const Color& stroke, const Point& start, const Point& end)
             : stroke(stroke), start(start), end(end)
