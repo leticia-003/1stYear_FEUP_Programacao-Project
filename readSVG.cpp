@@ -27,8 +27,9 @@ namespace svg
 
         return points;
     }
+    template<typename T>
 
-    void parseTransform(Circle& circle, const string& transform, const Point& transformOrigin) {
+    void parseTransform(T& element, const string& transform, const Point& transformOrigin) {
         stringstream ss(transform);
         string operation;
 
@@ -36,15 +37,15 @@ namespace svg
             if (operation.find("translate") != string::npos) {
                 int x, y;
                 sscanf(operation.c_str(), "translate(%d %d)", &x, &y);
-                circle.addTransformation([&circle, x, y]() { circle.translate({x, y}); });
+                element.addTransformation([&element, x, y]() { element.translate({x, y}); });
             } else if (operation.find("rotate") != string::npos) {
                 int angle;
                 sscanf(operation.c_str(), "rotate(%d)", &angle);
-                circle.addTransformation([&circle, angle, &transformOrigin]() { circle.rotate(transformOrigin, angle); });
+                element.addTransformation([&element, angle, &transformOrigin]() { element.rotate(transformOrigin, angle); });
             } else if (operation.find("scale") != string::npos) {
                 int factor;
                 sscanf(operation.c_str(), "scale(%d)", &factor);
-                circle.addTransformation([&circle, factor, &transformOrigin]() { circle.scale(transformOrigin, factor); });
+                element.addTransformation([&element, factor, &transformOrigin]() { element.scale(transformOrigin, factor); });
             }
         }
     }
@@ -80,8 +81,10 @@ namespace svg
 
             Point transformOrigin{0, 0}; // Default origin
 
-            string transformOriginStr = child->Attribute("transform-origin") ? child->Attribute("transform-origin") : "0 0";
+            const char* originAttr = child->Attribute("transform-origin");
+            string transformOriginStr = originAttr ? originAttr : "0 0";  // Provide a default "0 0" if not present
             sscanf(transformOriginStr.c_str(), "%d %d", &transformOrigin.x, &transformOrigin.y);
+
 
 
 
@@ -140,19 +143,23 @@ namespace svg
                 Color strokeColor = parse_color(stroke);
                 svg_elements.push_back(new Polyline(strokeColor, points));
             }
-            else if (nodeName == "line")
-            {
+            else if (nodeName == "line") {
                 int x1 = child->IntAttribute("x1");
                 int y1 = child->IntAttribute("y1");
                 int x2 = child->IntAttribute("x2");
                 int y2 = child->IntAttribute("y2");
-                string stroke = child->Attribute("stroke");
-                Color strokeColor = parse_color(stroke);
+                string stroke = child->Attribute("stroke") ? child->Attribute("stroke") : "black";
 
-                Point start{x1, y1};
-                Point end{x2, y2};
-                svg_elements.push_back(new Line(strokeColor, start, end));
+                Color strokeColor = parse_color(stroke);
+                Line* line = new Line(strokeColor, Point{x1, y1}, Point{x2, y2});
+
+                line->setTransformOrigin(transformOrigin);
+                parseTransform(*line, transform, transformOrigin);
+                line->applyTransformations();
+
+                svg_elements.push_back(line);
             }
+
 
             else if (nodeName == "polygon")
             {

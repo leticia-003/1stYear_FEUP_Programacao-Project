@@ -295,6 +295,10 @@ namespace svg
         */
         void rotate(const Point &origin, int degrees) override;
 
+        void applyTransformations();
+        void setTransformOrigin(const Point& origin);
+        void addTransformation(const std::function<void()>& transformation);
+
     private:
         /*!
             * @brief stroke
@@ -313,6 +317,9 @@ namespace svg
             * The end is a Point object that stores the x and y coordinates.
         */
         Point end;
+
+        Point transformOrigin;
+        std::vector<std::function<void()>> transformations;
     };
 
     /*!

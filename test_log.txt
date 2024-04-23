@@ -34,9 +34,7 @@ pixel (36 80): expected 255 0 0 got 255 255 255
 >>>> [27] rotate_circle <<<<
 >>>> [28] rotate_circle_with_origin <<<<
 >>>> [29] rotate_line <<<<
-pixel (0 1): expected 255 0 0 got 255 255 255
 >>>> [30] rotate_line_with_origin <<<<
-pixel (41 66): expected 0 255 0 got 255 255 255
 >>>> [31] rotate_polygon <<<<
 pixel (50 50): expected 255 255 255 got 0 0 255
 >>>> [32] rotate_polygon_with_origin <<<<
@@ -56,9 +54,7 @@ pixel (20 60): expected 255 0 0 got 255 255 255
 >>>> [40] scale_ellipse_with_origin <<<<
 pixel (100 300): expected 0 0 255 got 255 255 255
 >>>> [41] scale_line <<<<
-pixel (50 50): expected 255 255 255 got 0 255 0
 >>>> [42] scale_line_with_origin <<<<
-pixel (50 50): expected 255 0 0 got 0 255 0
 >>>> [43] scale_polygon <<<<
 pixel (25 25): expected 255 0 0 got 0 255 0
 >>>> [44] scale_polygon_with_origin <<<<
@@ -78,7 +74,7 @@ pixel (0 25): expected 0 255 0 got 255 0 0
 >>>> [51] translate_ellipse <<<<
 pixel (5 25): expected 0 255 0 got 0 0 255
 >>>> [52] translate_line <<<<
-pixel (1 1): expected 255 255 255 got 0 255 0
+pixel (51 1): expected 255 0 0 got 0 255 0
 >>>> [53] translate_polygon <<<<
 pixel (0 0): expected 255 0 0 got 0 0 255
 >>>> [54] translate_polyline <<<<

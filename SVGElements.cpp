@@ -154,6 +154,21 @@ namespace svg
         end = end.rotate(origin, degrees);
     }
 
+    void Line::applyTransformations() {
+        for (const auto& transform : transformations) {
+            transform();
+        }
+    }
+
+    void Line::setTransformOrigin(const Point& origin) {
+        transformOrigin = origin;
+    }
+
+    void Line::addTransformation(const std::function<void()>& transformation) {
+        transformations.push_back(transformation);
+    }
+
+
     //Polygon
     Polygon::Polygon(const Color &fill, const std::vector<Point> &points)
             : fill(fill), points(points)
