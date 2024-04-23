@@ -135,6 +135,8 @@ namespace svg
                 int height = child->IntAttribute("height");
                 string fill = child->Attribute("fill");
                 Color fillColor = parse_color(fill);
+                width -= 1;
+                height -= 1;
                 svg_elements.push_back(new Rectangle(fillColor, Point{x, y}, width, height));
             }
 
