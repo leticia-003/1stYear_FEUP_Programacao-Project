@@ -56,7 +56,6 @@ Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 6
 >>>> [47] scale_rect <<<<
 >>>> [48] scale_rect_with_origin <<<<
 >>>> [49] transform_several <<<<
-Assertion failed: (y >= 0 && y < height_), function at, file PNGImage.cpp, line 63.
 >>>> [50] translate_circle <<<<
 pixel (0 25): expected 0 255 0 got 255 0 0
 >>>> [51] translate_ellipse <<<<
@@ -64,9 +63,9 @@ pixel (10 25): expected 0 255 0 got 255 0 0
 >>>> [52] translate_line <<<<
 pixel (51 1): expected 255 0 0 got 0 255 0
 >>>> [53] translate_polygon <<<<
-Assertion failed: (y >= 0 && y < height_), function at, file PNGImage.cpp, line 63.
+pixel (0 0): expected 255 0 0 got 255 255 0
 >>>> [54] translate_polyline <<<<
-Assertion failed: (y >= 0 && y < height_), function at, file PNGImage.cpp, line 63.
+pixel (10 10): expected 0 0 255 got 0 255 0
 >>>> [55] translate_rect <<<<
 pixel (5 5): expected 0 255 0 got 255 0 0
 >>>> [56] use_1 <<<<
