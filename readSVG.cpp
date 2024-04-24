@@ -37,19 +37,22 @@ namespace svg
             if (operation.find("translate") != string::npos) {
                 // Get the translation values
                 int x = 0, y = 0;
-                cout << "Operation string: " << operation << endl;
-
                 // Find the position of '(' after "translate"
                 size_t pos = operation.find('(');
                 if (pos != string::npos) {
                     // Parse x and y from the substring after '('
-                    istringstream iss(operation.substr(pos + 1));
+                    string translateString = operation.substr(pos + 1);
+
+                    // Replace comma with space for easier parsing
+                    for (char& c : translateString) {
+                        if (c == ',') c = ' ';
+                    }
+
+                    istringstream iss(translateString);
                     iss >> x >> y;
 
                     // Add transformation with a lambda capturing x, y by value
                     element.addTransformation([=, &element]() { element.translate({x, y}); });
-
-                    cout << "x= " << x << " y=" << y << endl;
                 }
             }
             else if (operation.find("rotate") != string::npos) {

@@ -29,9 +29,7 @@ namespace svg
     }
 
     void Ellipse::translate(const Point &translation) {
-        std::cout << "Translation: (" << translation.x << ", " << translation.y << ")" << std::endl;
         center = center.translate(translation);
-        std::cout << "New Center: (" << center.x << ", " << center.y << ")" << std::endl;
     }
 
 
