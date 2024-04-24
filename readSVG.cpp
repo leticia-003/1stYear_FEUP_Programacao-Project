@@ -33,15 +33,30 @@ namespace svg
         stringstream ss(transform);
         string operation;
 
-        while (ss >> operation) {
+        while (getline(ss, operation, ')')) {
             if (operation.find("translate") != string::npos) {
-                int x, y;
-                sscanf(operation.c_str(), "translate(%d %d)", &x, &y);
-                element.addTransformation([&element, x, y]() { element.translate({x, y}); });
-            } else if (operation.find("rotate") != string::npos) {
+                // Get the translation values
+                int x = 0, y = 0;
+                cout << "Operation string: " << operation << endl;
+
+                // Find the position of '(' after "translate"
+                size_t pos = operation.find('(');
+                if (pos != string::npos) {
+                    // Parse x and y from the substring after '('
+                    istringstream iss(operation.substr(pos + 1));
+                    iss >> x >> y;
+
+                    // Add transformation with a lambda capturing x, y by value
+                    element.addTransformation([=, &element]() { element.translate({x, y}); });
+
+                    cout << "x= " << x << " y=" << y << endl;
+                }
+            }
+            else if (operation.find("rotate") != string::npos) {
                 int angle;
                 sscanf(operation.c_str(), "rotate(%d)", &angle);
                 element.addTransformation([&element, angle, &transformOrigin]() { element.rotate(transformOrigin, angle); });
+                cout << angle << endl;
             } else if (operation.find("scale") != string::npos) {
                 int factor;
                 sscanf(operation.c_str(), "scale(%d)", &factor);

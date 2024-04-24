@@ -32,16 +32,48 @@ pixel (36 80): expected 255 0 0 got 255 255 255
 >>>> [25] rect_2 <<<<
 >>>> [26] rect_3 <<<<
 >>>> [27] rotate_circle <<<<
+45
+30
 >>>> [28] rotate_circle_with_origin <<<<
+45
+90
+135
+180
+225
+270
 >>>> [29] rotate_line <<<<
+30
+-30
+15
+-15
 >>>> [30] rotate_line_with_origin <<<<
+30
+-30
+60
+-60
 >>>> [31] rotate_polygon <<<<
+-10
+-20
+-30
 >>>> [32] rotate_polygon_with_origin <<<<
+-20
+-10
+0
+10
+20
 >>>> [33] rotate_polyline <<<<
+10
+-10
 >>>> [34] rotate_polyline_with_origin <<<<
+270
 >>>> [35] rotate_rect <<<<
+10
+-10
 pixel (6 252): expected 0 0 255 got 255 255 255
 >>>> [36] rotate_rect_with_origin <<<<
+90
+30
+60
 Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 62.
 >>>> [37] scale_circle <<<<
 >>>> [38] scale_circle_with_origin <<<<
@@ -56,22 +88,73 @@ Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 6
 >>>> [47] scale_rect <<<<
 >>>> [48] scale_rect_with_origin <<<<
 >>>> [49] transform_several <<<<
-Assertion failed: (y >= 0 && y < height_), function at, file PNGImage.cpp, line 63.
+Operation string: translate(75 0
+x= 75 y=0
+180
 >>>> [50] translate_circle <<<<
-pixel (0 25): expected 0 255 0 got 255 0 0
+Operation string: translate(50 0
+x= 50 y=0
+Operation string: translate(0 50
+x= 0 y=50
+Operation string: translate(50 50
+x= 50 y=50
 >>>> [51] translate_ellipse <<<<
-pixel (10 25): expected 0 255 0 got 255 0 0
+Operation string: translate(50 0
+x= 50 y=0
+Translation: (50, 0)
+New Center: (75, 25)
+Operation string: translate(0 50
+x= 0 y=50
+Translation: (0, 50)
+New Center: (25, 75)
+Operation string: translate(50 50
+x= 50 y=50
+Translation: (50, 50)
+New Center: (75, 75)
 >>>> [52] translate_line <<<<
-pixel (51 1): expected 255 0 0 got 0 255 0
+Operation string: translate(50 0
+x= 50 y=0
+Operation string: translate(50 50
+x= 50 y=50
+Operation string: translate(-50 50
+x= -50 y=50
+Operation string: translate(50 100
+x= 50 y=100
 >>>> [53] translate_polygon <<<<
-Assertion failed: (y >= 0 && y < height_), function at, file PNGImage.cpp, line 63.
+Operation string: translate(50 0
+x= 50 y=0
+Operation string: translate(0 75
+x= 0 y=75
+Operation string: translate(125 75
+x= 125 y=75
+Operation string: translate(0 150
+x= 0 y=150
+Operation string: translate(75 75
+x= 75 y=75
+Operation string: translate(75 150
+x= 75 y=150
+Operation string: translate(200 150
+x= 200 y=150
 >>>> [54] translate_polyline <<<<
-Assertion failed: (y >= 0 && y < height_), function at, file PNGImage.cpp, line 63.
+Operation string: translate(200 0
+x= 200 y=0
+Operation string: translate(0 200
+x= 0 y=200
+Operation string: translate(200 200
+x= 200 y=200
 >>>> [55] translate_rect <<<<
-pixel (5 5): expected 0 255 0 got 255 0 0
+Operation string: translate(50 0
+x= 50 y=0
+Operation string: translate(0 50
+x= 0 y=50
+Operation string: translate(50,50
+x= 50 y=0
+pixel (55 5): expected 0 0 255 got 255 255 0
 >>>> [56] use_1 <<<<
 pixel (11 5): expected 255 0 0 got 255 255 255
 >>>> [57] use_2 <<<<
+Operation string: translate(50 0
+x= 50 y=0
 pixel (15 100): expected 0 0 255 got 255 255 255
 >>>> [58] use_3 <<<<
 pixel (0 250): expected 255 0 0 got 255 255 255

@@ -28,11 +28,12 @@ namespace svg
         img.draw_ellipse(center, radius, fill);
     }
 
-    void Ellipse::translate(const Point &translation)
-    {
-        // Translate the center of the ellipse
+    void Ellipse::translate(const Point &translation) {
+        std::cout << "Translation: (" << translation.x << ", " << translation.y << ")" << std::endl;
         center = center.translate(translation);
+        std::cout << "New Center: (" << center.x << ", " << center.y << ")" << std::endl;
     }
+
 
     void Ellipse::scale(const Point &origin, int scaling_factor) {
         // Scale the radius
