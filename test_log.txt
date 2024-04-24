@@ -42,7 +42,7 @@ pixel (36 80): expected 255 0 0 got 255 255 255
 >>>> [35] rotate_rect <<<<
 pixel (6 252): expected 0 0 255 got 255 255 255
 >>>> [36] rotate_rect_with_origin <<<<
-test: PNGImage.cpp:62: svg::Color& svg::PNGImage::at(int, int): Assertion `x >= 0 && x < width_' failed.
+Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 62.
 >>>> [37] scale_circle <<<<
 >>>> [38] scale_circle_with_origin <<<<
 >>>> [39] scale_ellipse <<<<
@@ -56,23 +56,23 @@ test: PNGImage.cpp:62: svg::Color& svg::PNGImage::at(int, int): Assertion `x >= 
 >>>> [47] scale_rect <<<<
 >>>> [48] scale_rect_with_origin <<<<
 >>>> [49] transform_several <<<<
-test: PNGImage.cpp:63: svg::Color& svg::PNGImage::at(int, int): Assertion `y >= 0 && y < height_' failed.
+Assertion failed: (y >= 0 && y < height_), function at, file PNGImage.cpp, line 63.
 >>>> [50] translate_circle <<<<
-test: PNGImage.cpp:63: svg::Color& svg::PNGImage::at(int, int): Assertion `y >= 0 && y < height_' failed.
+pixel (0 25): expected 0 255 0 got 255 0 0
 >>>> [51] translate_ellipse <<<<
-pixel (10 75): expected 255 0 0 got 255 255 255
+pixel (10 25): expected 0 255 0 got 255 0 0
 >>>> [52] translate_line <<<<
-test: PNGImage.cpp:63: svg::Color& svg::PNGImage::at(int, int): Assertion `y >= 0 && y < height_' failed.
+pixel (51 1): expected 255 0 0 got 0 255 0
 >>>> [53] translate_polygon <<<<
-test: PNGImage.cpp:63: svg::Color& svg::PNGImage::at(int, int): Assertion `y >= 0 && y < height_' failed.
+Assertion failed: (y >= 0 && y < height_), function at, file PNGImage.cpp, line 63.
 >>>> [54] translate_polyline <<<<
-test: PNGImage.cpp:63: svg::Color& svg::PNGImage::at(int, int): Assertion `y >= 0 && y < height_' failed.
+Assertion failed: (y >= 0 && y < height_), function at, file PNGImage.cpp, line 63.
 >>>> [55] translate_rect <<<<
-test: PNGImage.cpp:63: svg::Color& svg::PNGImage::at(int, int): Assertion `y >= 0 && y < height_' failed.
+pixel (5 5): expected 0 255 0 got 255 0 0
 >>>> [56] use_1 <<<<
 pixel (11 5): expected 255 0 0 got 255 255 255
 >>>> [57] use_2 <<<<
-test: PNGImage.cpp:63: svg::Color& svg::PNGImage::at(int, int): Assertion `y >= 0 && y < height_' failed.
+pixel (15 100): expected 0 0 255 got 255 255 255
 >>>> [58] use_3 <<<<
 pixel (0 250): expected 255 0 0 got 255 255 255
 >>>> [59] use_4 <<<<
