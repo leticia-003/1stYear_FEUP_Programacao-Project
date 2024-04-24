@@ -51,7 +51,6 @@ namespace svg
     }
 
 
-
     void readSVG(const string& svg_file, Point& dimensions, vector<SVGElement *>& svg_elements)
     {
         XMLDocument doc;
@@ -84,8 +83,6 @@ namespace svg
             const char* originAttr = child->Attribute("transform-origin");
             string transformOriginStr = originAttr ? originAttr : "0 0";  // Provide a default "0 0" if not present
             sscanf(transformOriginStr.c_str(), "%d %d", &transformOrigin.x, &transformOrigin.y);
-
-
 
 
             // Determine SVG element type
@@ -200,7 +197,6 @@ namespace svg
                 rectangle->setTransformOrigin(transformOrigin);
                 parseTransform(*rectangle, transform, transformOrigin);
                 rectangle->applyTransformations();
-
                 svg_elements.push_back(rectangle);
             }
 

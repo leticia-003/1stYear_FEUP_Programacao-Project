@@ -51,6 +51,20 @@ namespace svg
         center = center.rotate(origin, degrees);
     }
 
+    void Ellipse::applyTransformations() {
+        for (const auto& transform : transformations) {
+            transform();
+        }
+    }
+
+    void Ellipse::setTransformOrigin(const Point& origin) {
+        transformOrigin = origin;
+    }
+
+    void Ellipse::addTransformation(const std::function<void()>& transformation) {
+        transformations.push_back(transformation);
+    }
+
     // Circle
     Circle::Circle(const Color &fill, const Point &center, int radius)
             : fill(fill), center(center), radius(radius)
@@ -80,6 +94,20 @@ namespace svg
     {
         // Rotate the center of the circle around the origin
         center = center.rotate(origin, degrees);
+    }
+
+    void Circle::setTransformOrigin(const Point& origin) {
+        transformOrigin = origin;
+    }
+
+    void Circle::addTransformation(const std::function<void()>& transformation) {
+        transformations.push_back(transformation);
+    }
+
+    void Circle::applyTransformations() {
+        for (const auto& transform : transformations) {
+            transform();
+        }
     }
 
 
@@ -123,6 +151,20 @@ namespace svg
         }
     }
 
+    void Polyline::applyTransformations() {
+        for (const auto& transform : transformations) {
+            transform();
+        }
+    }
+
+    void Polyline::setTransformOrigin(const Point& origin) {
+        transformOrigin = origin;
+    }
+
+    void Polyline::addTransformation(const std::function<void()>& transformation) {
+        transformations.push_back(transformation);
+    }
+
     //Line
     Line::Line(const Color& stroke, const Point& start, const Point& end)
             : stroke(stroke), start(start), end(end)
@@ -153,6 +195,20 @@ namespace svg
         // Rotate the start and end points of the line around the origin
         start = start.rotate(origin, degrees);
         end = end.rotate(origin, degrees);
+    }
+
+    void Line::applyTransformations() {
+        for (const auto& transform : transformations) {
+            transform();
+        }
+    }
+
+    void Line::setTransformOrigin(const Point& origin) {
+        transformOrigin = origin;
+    }
+
+    void Line::addTransformation(const std::function<void()>& transformation) {
+        transformations.push_back(transformation);
     }
 
 
@@ -199,6 +255,20 @@ namespace svg
         }
     }
 
+    void Polygon::applyTransformations() {
+        for (const auto& transform : transformations) {
+            transform();
+        }
+    }
+
+    void Polygon::setTransformOrigin(const Point& origin) {
+        transformOrigin = origin;
+    }
+
+    void Polygon::addTransformation(const std::function<void()>& transformation) {
+        transformations.push_back(transformation);
+    }
+
     //Rectangle
     Rectangle::Rectangle(const Color &fill, const Point &upper_left, int width, int height)
             : fill(fill), upper_left(upper_left), width(width), height(height)
@@ -213,11 +283,6 @@ namespace svg
         points_for_drawing.emplace_back(Point{upper_left.x + width, upper_left.y});
         points_for_drawing.emplace_back(Point{upper_left.x + width, upper_left.y + height});
         points_for_drawing.emplace_back(Point{upper_left.x, upper_left.y + height});
-
-        if (upper_left.x < 0 || upper_left.x + width >= img.width() ||
-            upper_left.y < 0 || upper_left.y + height >= img.height()) {
-            return;
-        }
 
         // Draw the rectangle
         img.draw_polygon(points_for_drawing, fill);
@@ -237,17 +302,24 @@ namespace svg
         height *= scaling_factor;
     }
 
-    void Rectangle::rotate(const Point &origin, int degrees) {
-        Point center = {upper_left.x + width / 2, upper_left.y + height / 2};
-        Point new_center = center.rotate(origin, degrees);
-
-        // Calculate shift to keep the rectangle centered around its new center
-        Point shift = {new_center.x - center.x, new_center.y - center.y};
-
-        // Shift the upper_left corner by the computed shift
-        upper_left.x += shift.x;
-        upper_left.y += shift.y;
+    void Rectangle::rotate(const Point &origin, int degrees)
+    {
+        // Rotate the upper left corner of the rectangle around the origin
+        upper_left = upper_left.rotate(origin, degrees);
     }
 
+    void Rectangle::applyTransformations() {
+        for (const auto& transform : transformations) {
+            transform();
+        }
+    }
+
+    void Rectangle::setTransformOrigin(const Point& origin) {
+        transformOrigin = origin;
+    }
+
+    void Rectangle::addTransformation(const std::function<void()>& transformation) {
+        transformations.push_back(transformation);
+    }
 
 }
