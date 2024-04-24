@@ -2,7 +2,7 @@
 #ifndef __svg_SVGElements_hpp__
 #define __svg_SVGElements_hpp__
 
-#include <functional>
+
 #include "Color.hpp"
 #include "Point.hpp"
 #include "PNGImage.hpp"
