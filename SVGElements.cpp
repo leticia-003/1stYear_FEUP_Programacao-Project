@@ -1,52 +1,34 @@
 #include "SVGElements.hpp"
 #include <iostream>
-namespace svg
-{
-    // These must be defined!
+#include <memory>
+
+namespace svg {
     SVGElement::SVGElement() {}
     SVGElement::~SVGElement() {}
 
-    // Ellipse (initial code provided)
-    Ellipse::Ellipse(const Color &fill,
-                     const Point &center,
-                     const Point &radius)
-        : fill(fill), center(center), radius(radius)
-    {
+    void SVGElement::addTransformation(const std::function<void()>& transformation) {
+        transformations.push_back(transformation);
     }
-    void Ellipse::draw(PNGImage &img) const {
-        // Calculate actual bounding box of the ellipse to check boundaries
-        int minX = center.x - radius.x;
-        int maxX = center.x + radius.x;
-        int minY = center.y - radius.y;
-        int maxY = center.y + radius.y;
 
-        // Ensure the ellipse doesn't draw outside the canvas
-        if (minX < 0 || maxX >= img.width() || minY < 0 || maxY >= img.height()) {
-            return;  // Skip drawing if it exceeds boundaries
-        }
+    Ellipse::Ellipse(const Color& fill, const Point& center, const Point& radius)
+            : fill(fill), center(center), radius(radius) {}
 
+    void Ellipse::draw(PNGImage& img) const {
         img.draw_ellipse(center, radius, fill);
     }
 
-    void Ellipse::translate(const Point &translation) {
+    void Ellipse::translate(const Point& translation) {
         center = center.translate(translation);
     }
 
-
-    void Ellipse::scale(const Point &origin, int scaling_factor) {
-        // Scale the radius
+    void Ellipse::scale(const Point& origin, int scaling_factor) {
         radius.x *= scaling_factor;
         radius.y *= scaling_factor;
-
-        // Scale the center position relative to the transform-origin
         center.x = origin.x + (center.x - origin.x) * scaling_factor;
         center.y = origin.y + (center.y - origin.y) * scaling_factor;
     }
 
-
-    void Ellipse::rotate(const Point &origin, int degrees)
-    {
-        // Rotate the center of the ellipse around the origin
+    void Ellipse::rotate(const Point& origin, int degrees) {
         center = center.rotate(origin, degrees);
     }
 
@@ -64,35 +46,35 @@ namespace svg
         transformations.push_back(transformation);
     }
 
-    // Circle
-    Circle::Circle(const Color &fill, const Point &center, int radius)
-            : fill(fill), center(center), radius(radius)
-    {
+    std::unique_ptr<SVGElement> Ellipse::clone() const {
+        return std::make_unique<Ellipse>(*this);
     }
 
-    void Circle::draw(PNGImage &img) const
-    {
-        // Draw an ellipse where rx = ry = radius
+    Circle::Circle(const Color& fill, const Point& center, int radius)
+            : fill(fill), center(center), radius(radius) {}
+
+    void Circle::draw(PNGImage& img) const {
         Point radiusPoint{radius, radius};
         img.draw_ellipse(center, radiusPoint, fill);
     }
-    void Circle::translate(const Point &translation)
-    {
-        // Translate the center of the circle
+
+    void Circle::translate(const Point& translation) {
         center = center.translate(translation);
     }
 
-    void Circle::scale(const Point &origin, int scaling_factor)
-    {
-        // Scale the radius of the circle from the origin
+    void Circle::scale(const Point& origin, int scaling_factor) {
         radius *= scaling_factor;
-        center = center.scale(origin, scaling_factor); // Translate the center
+        center = center.scale(origin, scaling_factor);
     }
 
-    void Circle::rotate(const Point &origin, int degrees)
-    {
-        // Rotate the center of the circle around the origin
+    void Circle::rotate(const Point& origin, int degrees) {
         center = center.rotate(origin, degrees);
+    }
+
+    void Circle::applyTransformations() {
+        for (const auto& transform : transformations) {
+            transform();
+        }
     }
 
     void Circle::setTransformOrigin(const Point& origin) {
@@ -103,49 +85,33 @@ namespace svg
         transformations.push_back(transformation);
     }
 
-    void Circle::applyTransformations() {
-        for (const auto& transform : transformations) {
-            transform();
-        }
+    std::unique_ptr<SVGElement> Circle::clone() const {
+        return std::make_unique<Circle>(*this);
     }
 
-
-    //Polyline
-    Polyline::Polyline(const Color &stroke, const std::vector<Point> &points)
-            : stroke(stroke), points(points)
-    {
-    }
+    Polyline::Polyline(const Color& stroke, const std::vector<Point>& points)
+            : stroke(stroke), points(points) {}
 
     void Polyline::draw(PNGImage& img) const {
-        // Draw polyline
         for (size_t i = 0; i < points.size() - 1; ++i) {
             img.draw_line(points[i], points[i + 1], stroke);
         }
     }
 
-    void Polyline::translate(const Point &translation)
-    {
-        // Translate each point of the polyline
-        for (Point &p : points)
-        {
+    void Polyline::translate(const Point& translation) {
+        for (Point& p : points) {
             p = p.translate(translation);
         }
     }
 
-    void Polyline::scale(const Point &origin, int scaling_factor)
-    {
-        // Scale each point of the polyline from the origin
-        for (Point &p : points)
-        {
+    void Polyline::scale(const Point& origin, int scaling_factor) {
+        for (Point& p : points) {
             p = p.scale(origin, scaling_factor);
         }
     }
 
-    void Polyline::rotate(const Point &origin, int degrees)
-    {
-        // Rotate each point of the polyline around the origin
-        for (Point &p : points)
-        {
+    void Polyline::rotate(const Point& origin, int degrees) {
+        for (Point& p : points) {
             p = p.rotate(origin, degrees);
         }
     }
@@ -164,34 +130,28 @@ namespace svg
         transformations.push_back(transformation);
     }
 
-    //Line
-    Line::Line(const Color& stroke, const Point& start, const Point& end)
-            : stroke(stroke), start(start), end(end)
-    {
+    std::unique_ptr<SVGElement> Polyline::clone() const {
+        return std::make_unique<Polyline>(*this);
     }
 
+    Line::Line(const Color& stroke, const Point& start, const Point& end)
+            : stroke(stroke), start(start), end(end) {}
+
     void Line::draw(PNGImage& img) const {
-        // Draw line
         img.draw_line(start, end, stroke);
     }
 
-    void Line::translate(const Point &translation)
-    {
-        // Translate the start and end points of the line
+    void Line::translate(const Point& translation) {
         start = start.translate(translation);
         end = end.translate(translation);
     }
 
-    void Line::scale(const Point &origin, int scaling_factor)
-    {
-        // Scale the start and end points of the line from the origin
+    void Line::scale(const Point& origin, int scaling_factor) {
         start = start.scale(origin, scaling_factor);
         end = end.scale(origin, scaling_factor);
     }
 
-    void Line::rotate(const Point &origin, int degrees)
-    {
-        // Rotate the start and end points of the line around the origin
+    void Line::rotate(const Point& origin, int degrees) {
         start = start.rotate(origin, degrees);
         end = end.rotate(origin, degrees);
     }
@@ -210,46 +170,31 @@ namespace svg
         transformations.push_back(transformation);
     }
 
-
-    //Polygon
-    Polygon::Polygon(const Color &fill, const std::vector<Point> &points)
-            : fill(fill), points(points)
-    {
+    std::unique_ptr<SVGElement> Line::clone() const {
+        return std::make_unique<Line>(*this);
     }
 
-    void Polygon::draw(PNGImage &img) const
-    {
-        // Construct a vector of Point for drawing the polygon
-        std::vector<Point> points_for_drawing = points; // Assuming points is a vector of Point
+    Polygon::Polygon(const Color& fill, const std::vector<Point>& points)
+            : fill(fill), points(points) {}
 
-        // Draw the polygon
-        img.draw_polygon(points_for_drawing, fill);
+    void Polygon::draw(PNGImage& img) const {
+        img.draw_polygon(points, fill);
     }
 
-
-    void Polygon::translate(const Point &translation)
-    {
-        // Translate each point of the polygon
-        for (Point &p : points)
-        {
+    void Polygon::translate(const Point& translation) {
+        for (Point& p : points) {
             p = p.translate(translation);
         }
     }
 
-    void Polygon::scale(const Point &origin, int scaling_factor)
-    {
-        // Scale each point of the polygon from the origin
-        for (Point &p : points)
-        {
+    void Polygon::scale(const Point& origin, int scaling_factor) {
+        for (Point& p : points) {
             p = p.scale(origin, scaling_factor);
         }
     }
 
-    void Polygon::rotate(const Point &origin, int degrees)
-    {
-        // Rotate each point of the polygon around the origin
-        for (Point &p : points)
-        {
+    void Polygon::rotate(const Point& origin, int degrees) {
+        for (Point& p : points) {
             p = p.rotate(origin, degrees);
         }
     }
@@ -268,42 +213,34 @@ namespace svg
         transformations.push_back(transformation);
     }
 
-    //Rectangle
-    Rectangle::Rectangle(const Color &fill, const Point &upper_left, int width, int height)
-            : fill(fill), upper_left(upper_left), width(width), height(height)
-    {
+    std::unique_ptr<SVGElement> Polygon::clone() const {
+        return std::make_unique<Polygon>(*this);
     }
 
-    void Rectangle::draw(PNGImage &img) const
-    {
-        // Construct the points for drawing the rectangle
-        std::vector<Point> points_for_drawing;
-        points_for_drawing.emplace_back(Point{upper_left.x, upper_left.y});
-        points_for_drawing.emplace_back(Point{upper_left.x + width, upper_left.y});
-        points_for_drawing.emplace_back(Point{upper_left.x + width, upper_left.y + height});
-        points_for_drawing.emplace_back(Point{upper_left.x, upper_left.y + height});
+    Rectangle::Rectangle(const Color& fill, const Point& upper_left, int width, int height)
+            : fill(fill), upper_left(upper_left), width(width), height(height) {}
 
-        // Draw the rectangle
+    void Rectangle::draw(PNGImage& img) const {
+        std::vector<Point> points_for_drawing{
+                {upper_left.x, upper_left.y},
+                {upper_left.x + width, upper_left.y},
+                {upper_left.x + width, upper_left.y + height},
+                {upper_left.x, upper_left.y + height}
+        };
         img.draw_polygon(points_for_drawing, fill);
     }
 
-    void Rectangle::translate(const Point &translation)
-    {
-        // Translate the upper left corner of the rectangle
+    void Rectangle::translate(const Point& translation) {
         upper_left = upper_left.translate(translation);
     }
 
-    void Rectangle::scale(const Point &origin, int scaling_factor)
-    {
-        // Scale the width and height of the rectangle from the origin
+    void Rectangle::scale(const Point& origin, int scaling_factor) {
         upper_left = upper_left.scale(origin, scaling_factor);
         width *= scaling_factor;
         height *= scaling_factor;
     }
 
-    void Rectangle::rotate(const Point &origin, int degrees)
-    {
-        // Rotate the upper left corner of the rectangle around the origin
+    void Rectangle::rotate(const Point& origin, int degrees) {
         upper_left = upper_left.rotate(origin, degrees);
     }
 
@@ -321,4 +258,67 @@ namespace svg
         transformations.push_back(transformation);
     }
 
+    std::unique_ptr<SVGElement> Rectangle::clone() const {
+        return std::make_unique<Rectangle>(*this);
+    }
+
+    SVGGroup::SVGGroup() {}
+
+    void SVGGroup::draw(PNGImage& img) const {
+        for (const auto& element : elements) {
+            element->draw(img);
+        }
+    }
+
+    void SVGGroup::translate(const Point& translation) {
+        for (auto& element : elements) {
+            element->translate(translation);
+        }
+    }
+
+    void SVGGroup::scale(const Point& origin, int scaling_factor) {
+        for (auto& element : elements) {
+            element->scale(origin, scaling_factor);
+        }
+    }
+
+    void SVGGroup::rotate(const Point& origin, int degrees) {
+        for (auto& element : elements) {
+            element->rotate(origin, degrees);
+        }
+    }
+
+    void SVGGroup::applyTransformations() {
+        for (auto& element : elements) {
+            for (const auto& transform : transformations) {
+                element->addTransformation(transform);
+            }
+            element->applyTransformations();
+        }
+    }
+
+    void SVGGroup::setTransformOrigin(const Point& origin) {
+        transformOrigin = origin;
+        for (auto& element : elements) {
+            element->setTransformOrigin(origin);
+        }
+    }
+
+    void SVGGroup::addTransformation(const std::function<void()>& transformation) {
+        transformations.push_back(transformation);
+    }
+
+    void SVGGroup::addElement(std::unique_ptr<SVGElement> element) {
+        elements.push_back(std::move(element));
+    }
+
+    std::unique_ptr<SVGElement> SVGGroup::clone() const {
+        auto clonedGroup = std::make_unique<SVGGroup>();
+        clonedGroup->id = this->id;
+        clonedGroup->transformations = this->transformations;
+        for (const auto& element : elements) {
+            clonedGroup->elements.push_back(element->clone());
+        }
+        return clonedGroup;
+    }
 }

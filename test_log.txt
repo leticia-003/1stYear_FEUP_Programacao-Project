@@ -1,4 +1,5 @@
 >>>> [1] batman <<<<
+pixel (0 999): expected 13 67 111 got 255 255 255
 >>>> [2] batman_2 <<<<
 >>>> [3] blank_1 <<<<
 >>>> [4] blank_2 <<<<
@@ -8,103 +9,257 @@
 >>>> [8] ellipse_2 <<<<
 >>>> [9] group_1 <<<<
 >>>> [10] group_2 <<<<
-pixel (0 25): expected 255 0 0 got 255 255 255
+Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 62.
 >>>> [11] group_3 <<<<
-pixel (0 250): expected 255 255 255 got 255 0 0
+Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 62.
 >>>> [12] group_4 <<<<
-45
 Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 62.
 >>>> [13] group_5 <<<<
-45
 Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 62.
 >>>> [14] group_6 <<<<
-pixel (10 10): expected 255 0 0 got 0 0 255
+Point.cpp:26:43: runtime error: signed integer overflow: -2068975536 * 2 cannot be represented in type 'int'
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Point.cpp:26:43 in 
+Point.cpp:27:31: runtime error: signed integer overflow: 602 - -2147483648 cannot be represented in type 'int'
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Point.cpp:27:31 in 
+Point.cpp:27:43: runtime error: signed integer overflow: -2147483046 * 2 cannot be represented in type 'int'
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Point.cpp:27:43 in 
+Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 62.
 >>>> [15] group_7 <<<<
-pixel (36 80): expected 255 0 0 got 255 255 255
+Assertion failed: (y >= 0 && y < height_), function at, file PNGImage.cpp, line 63.
 >>>> [16] line_1 <<<<
 >>>> [17] line_2 <<<<
 >>>> [18] lion <<<<
+pixel (0 599): expected 0 255 0 got 255 255 255
 >>>> [19] polygon_1 <<<<
 >>>> [20] polygon_2 <<<<
 >>>> [21] polyline_1 <<<<
 >>>> [22] polyline_2 <<<<
 >>>> [23] polyline_3 <<<<
 >>>> [24] rect_1 <<<<
+pixel (0 599): expected 0 0 255 got 255 255 255
 >>>> [25] rect_2 <<<<
+pixel (10 589): expected 255 0 0 got 255 255 255
 >>>> [26] rect_3 <<<<
+pixel (30 154): expected 0 0 0 got 255 255 255
 >>>> [27] rotate_circle <<<<
-45
-30
 >>>> [28] rotate_circle_with_origin <<<<
-45
-90
-135
-180
-225
-270
+Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 62.
 >>>> [29] rotate_line <<<<
-30
--30
-15
--15
 >>>> [30] rotate_line_with_origin <<<<
-30
--30
-60
--60
+Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 62.
 >>>> [31] rotate_polygon <<<<
--10
--20
--30
 >>>> [32] rotate_polygon_with_origin <<<<
--20
--10
-0
-10
-20
+Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 62.
 >>>> [33] rotate_polyline <<<<
-10
--10
 >>>> [34] rotate_polyline_with_origin <<<<
-270
+Assertion failed: (y >= 0 && y < height_), function at, file PNGImage.cpp, line 63.
 >>>> [35] rotate_rect <<<<
-10
--10
 pixel (6 252): expected 0 0 255 got 255 255 255
 >>>> [36] rotate_rect_with_origin <<<<
-90
-30
-60
 Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 62.
 >>>> [37] scale_circle <<<<
 >>>> [38] scale_circle_with_origin <<<<
+Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 62.
 >>>> [39] scale_ellipse <<<<
 >>>> [40] scale_ellipse_with_origin <<<<
+Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 62.
 >>>> [41] scale_line <<<<
 >>>> [42] scale_line_with_origin <<<<
+Assertion failed: (y >= 0 && y < height_), function at, file PNGImage.cpp, line 63.
 >>>> [43] scale_polygon <<<<
 >>>> [44] scale_polygon_with_origin <<<<
+Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 62.
 >>>> [45] scale_polyline <<<<
 >>>> [46] scale_polyline_with_origin <<<<
+Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 62.
 >>>> [47] scale_rect <<<<
+pixel (0 19): expected 0 0 0 got 255 0 0
 >>>> [48] scale_rect_with_origin <<<<
+Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 62.
 >>>> [49] transform_several <<<<
-180
+Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 62.
 >>>> [50] translate_circle <<<<
 >>>> [51] translate_ellipse <<<<
 >>>> [52] translate_line <<<<
 >>>> [53] translate_polygon <<<<
 >>>> [54] translate_polyline <<<<
 >>>> [55] translate_rect <<<<
+Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 62.
 >>>> [56] use_1 <<<<
-pixel (11 5): expected 255 0 0 got 255 255 255
+convert.cpp:15:16: runtime error: member call on address 0x000108801a60 which does not point to an object of type 'svg::SVGElement'
+0x000108801a60: note: object has invalid vptr
+ 00 00 00 00  7d 00 00 00 00 00 00 00  6d 79 43 69 72 63 6c 65  00 00 00 00 00 00 00 00  00 00 00 00
+              ^~~~~~~~~~~~~~~~~~~~~~~
+              invalid vptr
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior convert.cpp:15:16 in 
+=================================================================
+==69966==ERROR: AddressSanitizer: heap-use-after-free on address 0x000108801a60 at pc 0x000105132f90 bp 0x00016aec1e30 sp 0x00016aec1e28
+READ of size 8 at 0x000108801a60 thread T0
+    #0 0x105132f8c in svg::convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)+0x630 (test:arm64+0x1001f6f8c)
+    #1 0x104f6b8d0 in svg::TestDriver::run_conversion_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:41
+    #2 0x104f4bbe0 in svg::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:102
+    #3 0x104f418f8 in svg::TestDriver::run_tests(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:163
+    #4 0x104f40790 in main test.cpp:181
+    #5 0x1990ae0dc  (<unknown module>)
+
+0x000108801a60 is located 0 bytes inside of 80-byte region [0x000108801a60,0x000108801ab0)
+freed by thread T0 here:
+    #0 0x105b8952c in wrap__ZdlPv+0x74 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x6152c)
+    #1 0x10508bfdc in svg::Circle::~Circle() SVGElements.hpp:65
+    #2 0x1050a0924 in std::__1::default_delete<svg::SVGElement>::operator()[abi:v160006](svg::SVGElement*) const unique_ptr.h:65
+    #3 0x1050a051c in std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>::reset[abi:v160006](svg::SVGElement*) unique_ptr.h:297
+    #4 0x1050a026c in std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>::~unique_ptr[abi:v160006]() unique_ptr.h:263
+    #5 0x10508bd08 in std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>::~unique_ptr[abi:v160006]() unique_ptr.h:263
+    #6 0x105107578 in std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>::~pair() pair.h:63
+    #7 0x1051074fc in std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>::~pair() pair.h:63
+    #8 0x105107454 in void std::__1::allocator_traits<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, void*>>>::destroy[abi:v160006]<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, void, void>(std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, void*>>&, std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>*) allocator_traits.h:325
+    #9 0x105132860 in std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>::destroy(std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, void*>*) __tree:1813
+    #10 0x105132430 in std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>::~__tree() __tree:1801
+    #11 0x1051323ac in std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>::~__tree() __tree:1798
+    #12 0x105132334 in std::__1::map<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>::~map[abi:v160006]() map:1164
+    #13 0x1050d3f6c in std::__1::map<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>::~map[abi:v160006]() map:1162
+    #14 0x1050d3c10 in svg::readSVG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, svg::Point&, std::__1::vector<svg::SVGElement*, std::__1::allocator<svg::SVGElement*>>&) readSVG.cpp:197
+    #15 0x105132b9c in svg::convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)+0x240 (test:arm64+0x1001f6b9c)
+    #16 0x104f6b8d0 in svg::TestDriver::run_conversion_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:41
+    #17 0x104f4bbe0 in svg::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:102
+    #18 0x104f418f8 in svg::TestDriver::run_tests(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:163
+    #19 0x104f40790 in main test.cpp:181
+    #20 0x1990ae0dc  (<unknown module>)
+
+previously allocated by thread T0 here:
+    #0 0x105b890ec in wrap__Znwm+0x74 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x610ec)
+    #1 0x1050c9efc in svg::parseSVGElement(tinyxml2::XMLElement*, svg::Point const&, std::__1::vector<svg::SVGElement*, std::__1::allocator<svg::SVGElement*>>&, std::__1::map<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>&) readSVG.cpp:126
+    #2 0x1050d3a90 in svg::readSVG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, svg::Point&, std::__1::vector<svg::SVGElement*, std::__1::allocator<svg::SVGElement*>>&) readSVG.cpp:194
+    #3 0x105132b9c in svg::convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)+0x240 (test:arm64+0x1001f6b9c)
+    #4 0x104f6b8d0 in svg::TestDriver::run_conversion_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:41
+    #5 0x104f4bbe0 in svg::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:102
+    #6 0x104f418f8 in svg::TestDriver::run_tests(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:163
+    #7 0x104f40790 in main test.cpp:181
+    #8 0x1990ae0dc  (<unknown module>)
+
+SUMMARY: AddressSanitizer: heap-use-after-free (test:arm64+0x1001f6f8c) in svg::convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)+0x630
+Shadow bytes around the buggy address:
+  0x000108801780: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x000108801800: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x000108801880: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x000108801900: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x000108801980: 00 00 00 00 00 00 00 00 00 00 fa fa fa fa 00 00
+=>0x000108801a00: 00 00 00 00 00 00 00 00 fa fa fa fa[fd]fd fd fd
+  0x000108801a80: fd fd fd fd fd fd fa fa fa fa 00 00 00 00 00 00
+  0x000108801b00: 00 00 00 fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x000108801b80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x000108801c00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x000108801c80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==69966==ABORTING
 >>>> [57] use_2 <<<<
-pixel (15 100): expected 0 0 255 got 255 255 255
+convert.cpp:15:16: runtime error: member call on address 0x000108801a60 which does not point to an object of type 'svg::SVGElement'
+0x000108801a60: note: object has invalid vptr
+ 00 00 00 00  85 00 00 00 00 00 00 00  63 31 00 00 00 00 00 00  00 00 00 00 00 00 00 00  00 00 00 00
+              ^~~~~~~~~~~~~~~~~~~~~~~
+              invalid vptr
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior convert.cpp:15:16 in 
+=================================================================
+==69968==ERROR: AddressSanitizer: heap-use-after-free on address 0x000108801a60 at pc 0x000105132f90 bp 0x00016aec1e30 sp 0x00016aec1e28
+READ of size 8 at 0x000108801a60 thread T0
+    #0 0x105132f8c in svg::convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)+0x630 (test:arm64+0x1001f6f8c)
+    #1 0x104f6b8d0 in svg::TestDriver::run_conversion_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:41
+    #2 0x104f4bbe0 in svg::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:102
+    #3 0x104f418f8 in svg::TestDriver::run_tests(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:163
+    #4 0x104f40790 in main test.cpp:181
+    #5 0x1990ae0dc  (<unknown module>)
+
+0x000108801a60 is located 0 bytes inside of 80-byte region [0x000108801a60,0x000108801ab0)
+freed by thread T0 here:
+    #0 0x105b8952c in wrap__ZdlPv+0x74 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x6152c)
+    #1 0x10508bfdc in svg::Circle::~Circle() SVGElements.hpp:65
+    #2 0x1050a0924 in std::__1::default_delete<svg::SVGElement>::operator()[abi:v160006](svg::SVGElement*) const unique_ptr.h:65
+    #3 0x1050a051c in std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>::reset[abi:v160006](svg::SVGElement*) unique_ptr.h:297
+    #4 0x1050a026c in std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>::~unique_ptr[abi:v160006]() unique_ptr.h:263
+    #5 0x10508bd08 in std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>::~unique_ptr[abi:v160006]() unique_ptr.h:263
+    #6 0x105107578 in std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>::~pair() pair.h:63
+    #7 0x1051074fc in std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>::~pair() pair.h:63
+    #8 0x105107454 in void std::__1::allocator_traits<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, void*>>>::destroy[abi:v160006]<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, void, void>(std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, void*>>&, std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>*) allocator_traits.h:325
+    #9 0x105132860 in std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>::destroy(std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, void*>*) __tree:1813
+    #10 0x105132430 in std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>::~__tree() __tree:1801
+    #11 0x1051323ac in std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>::~__tree() __tree:1798
+    #12 0x105132334 in std::__1::map<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>::~map[abi:v160006]() map:1164
+    #13 0x1050d3f6c in std::__1::map<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>::~map[abi:v160006]() map:1162
+    #14 0x1050d3c10 in svg::readSVG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, svg::Point&, std::__1::vector<svg::SVGElement*, std::__1::allocator<svg::SVGElement*>>&) readSVG.cpp:197
+    #15 0x105132b9c in svg::convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)+0x240 (test:arm64+0x1001f6b9c)
+    #16 0x104f6b8d0 in svg::TestDriver::run_conversion_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:41
+    #17 0x104f4bbe0 in svg::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:102
+    #18 0x104f418f8 in svg::TestDriver::run_tests(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:163
+    #19 0x104f40790 in main test.cpp:181
+    #20 0x1990ae0dc  (<unknown module>)
+
+previously allocated by thread T0 here:
+    #0 0x105b890ec in wrap__Znwm+0x74 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x610ec)
+    #1 0x1050c9efc in svg::parseSVGElement(tinyxml2::XMLElement*, svg::Point const&, std::__1::vector<svg::SVGElement*, std::__1::allocator<svg::SVGElement*>>&, std::__1::map<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>&) readSVG.cpp:126
+    #2 0x1050d3a90 in svg::readSVG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, svg::Point&, std::__1::vector<svg::SVGElement*, std::__1::allocator<svg::SVGElement*>>&) readSVG.cpp:194
+    #3 0x105132b9c in svg::convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)+0x240 (test:arm64+0x1001f6b9c)
+    #4 0x104f6b8d0 in svg::TestDriver::run_conversion_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:41
+    #5 0x104f4bbe0 in svg::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:102
+    #6 0x104f418f8 in svg::TestDriver::run_tests(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:163
+    #7 0x104f40790 in main test.cpp:181
+    #8 0x1990ae0dc  (<unknown module>)
+
+SUMMARY: AddressSanitizer: heap-use-after-free (test:arm64+0x1001f6f8c) in svg::convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)+0x630
+Shadow bytes around the buggy address:
+  0x000108801780: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x000108801800: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x000108801880: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x000108801900: fa fa 00 00 00 00 00 00 00 00 00 00 fa fa fa fa
+  0x000108801980: 00 00 00 00 00 00 00 00 00 00 fa fa fa fa fd fd
+=>0x000108801a00: fd fd fd fd fd fd fd fd fa fa fa fa[fd]fd fd fd
+  0x000108801a80: fd fd fd fd fd fd fa fa fa fa 00 00 00 00 00 00
+  0x000108801b00: 00 00 00 fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x000108801b80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x000108801c00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x000108801c80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==69968==ABORTING
 >>>> [58] use_3 <<<<
-pixel (0 750): expected 255 0 0 got 255 255 255
+Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 62.
 >>>> [59] use_4 <<<<
-pixel (0 500): expected 255 0 0 got 255 255 255
+Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 62.
 >>>> [60] use_5 <<<<
-pixel (1 1): expected 255 255 255 got 0 255 0
+Assertion failed: (x >= 0 && x < width_), function at, file PNGImage.cpp, line 62.
 >>>> [61] use_6 <<<<
-pixel (0 20): expected 0 0 0 got 255 0 0
+pixel (0 0): expected 0 0 0 got 255 255 255
