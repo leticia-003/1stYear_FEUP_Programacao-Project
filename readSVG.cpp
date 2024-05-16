@@ -16,13 +16,11 @@ namespace svg {
         char c;
         Point p;
 
-        // Read each point, ignoring commas
         while (ss >> p.x) {
-            ss >> c;  // This should read the comma separator
-            if (ss.peek() == ',') ss.ignore();  // If next character is a comma, ignore it
+            ss >> c;
+            if (ss.peek() == ',') ss.ignore();
             ss >> p.y;
             points.push_back(p);
-            // Skip all consecutive commas and whitespace
             while (isspace(ss.peek()) || ss.peek() == ',') ss.ignore();
         }
 
@@ -47,26 +45,25 @@ namespace svg {
                 }
             } else if (operation.find("rotate") != string::npos) {
                 int angle;
-                sscanf(operation.c_str(), "rotate(%d)", &angle);
-                element.addTransformation([&element, angle, &transformOrigin]() { element.rotate(transformOrigin, angle); });
+                sscanf(operation.c_str(), "rotate(%d", &angle);
+                element.addTransformation([&element, angle, transformOrigin]() { element.rotate(transformOrigin, angle); });
             } else if (operation.find("scale") != string::npos) {
                 int factor;
-                sscanf(operation.c_str(), "scale(%d)", &factor);
-                element.addTransformation([&element, factor, &transformOrigin]() { element.scale(transformOrigin, factor); });
+                sscanf(operation.c_str(), "scale(%d", &factor);
+                element.addTransformation([&element, factor, transformOrigin]() { element.scale(transformOrigin, factor); });
             }
         }
     }
 
-
     void parseSVGElement(XMLElement* element, const Point& transformOrigin, vector<SVGElement*>& svg_elements, map<string, unique_ptr<SVGElement>>& elementMap) {
         const string nodeName = element->Name();
         const char* attrValue = element->Attribute("transform");
-        string transform = attrValue ? attrValue : "";  // Use empty string if null
+        string transform = attrValue ? attrValue : "";
 
-        Point newTransformOrigin = transformOrigin; // By default, use parent's transform origin
+        Point newTransformOrigin = transformOrigin;
 
         const char* originAttr = element->Attribute("transform-origin");
-        string transformOriginStr = originAttr ? originAttr : "0 0";  // Provide a default "0 0" if not present
+        string transformOriginStr = originAttr ? originAttr : "0 0";
         sscanf(transformOriginStr.c_str(), "%d %d", &newTransformOrigin.x, &newTransformOrigin.y);
 
         if (nodeName == "g") {
@@ -90,18 +87,6 @@ namespace svg {
                 group->applyTransformations();
                 svg_elements.push_back(group.release());
             }
-        } else if (nodeName == "use") {
-            const char* href = element->Attribute("href");
-            if (href && href[0] == '#') {
-                string referencedId = href + 1;
-                auto it = elementMap.find(referencedId);
-                if (it != elementMap.end()) {
-                    auto clonedElement = it->second->clone();
-                    parseTransform(*clonedElement, transform, newTransformOrigin);
-                    clonedElement->applyTransformations();
-                    svg_elements.push_back(clonedElement.release());
-                }
-            }
         } else {
             SVGElement* newElement = nullptr;
 
@@ -115,6 +100,7 @@ namespace svg {
 
                 Point center{cx, cy};
                 Point radius{rx, ry};
+
                 newElement = new Ellipse(fillColor, center, radius);
             } else if (nodeName == "circle") {
                 int cx = element->IntAttribute("cx");
@@ -129,6 +115,7 @@ namespace svg {
                 vector<Point> points = parse_points(points_str);
                 string stroke = element->Attribute("stroke");
                 Color strokeColor = parse_color(stroke);
+
                 newElement = new Polyline(strokeColor, points);
             } else if (nodeName == "line") {
                 int x1 = element->IntAttribute("x1");
@@ -153,15 +140,13 @@ namespace svg {
                 int height = element->IntAttribute("height");
                 string fill = element->Attribute("fill");
                 Color fillColor = parse_color(fill);
-                width -= 1;
-                height -= 1;
 
                 newElement = new Rectangle(fillColor, Point{x, y}, width, height);
             }
 
             if (newElement) {
-                newElement->setTransformOrigin(transformOrigin);
-                parseTransform(*newElement, transform, transformOrigin);
+                newElement->setTransformOrigin(newTransformOrigin);
+                parseTransform(*newElement, transform, newTransformOrigin);
                 newElement->applyTransformations();
                 svg_elements.push_back(newElement);
 
@@ -174,17 +159,14 @@ namespace svg {
         }
     }
 
-
-    void readSVG(const string& svg_file, Point& dimensions, vector<SVGElement*>& svg_elements)
-    {
+    void readSVG(const string& svg_file, Point& dimensions, vector<SVGElement*>& svg_elements) {
         XMLDocument doc;
         XMLError r = doc.LoadFile(svg_file.c_str());
-        if (r != XML_SUCCESS)
-        {
+        if (r != XML_SUCCESS) {
             throw runtime_error("Unable to load " + svg_file);
         }
         XMLElement* xml_elem = doc.RootElement();
-        map<string, unique_ptr<SVGElement>> elementMap; // Store elements by ID
+        map<string, unique_ptr<SVGElement>> elementMap;
 
         dimensions.x = xml_elem->IntAttribute("width");
         dimensions.y = xml_elem->IntAttribute("height");
