@@ -175,6 +175,7 @@ namespace svg
     {
     public:
         SVGGroup();
+        std::vector<std::unique_ptr<SVGElement>> elements;
 
         void draw(PNGImage &img) const override;
         void translate(const Point &translation) override;
@@ -182,6 +183,7 @@ namespace svg
         void rotate(const Point &origin, int degrees) override;
 
         void applyTransformations() override;
+
         void setTransformOrigin(const Point& origin) override;
         void addTransformation(const std::function<void()>& transformation) override;
         std::unique_ptr<SVGElement> clone() const override;
@@ -189,7 +191,7 @@ namespace svg
         void addElement(std::unique_ptr<SVGElement> element);
 
     private:
-        std::vector<std::unique_ptr<SVGElement>> elements;
+
         Point transformOrigin;
     };
 }

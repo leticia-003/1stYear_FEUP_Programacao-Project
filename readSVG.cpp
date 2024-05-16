@@ -84,7 +84,7 @@ namespace svg {
             if (!group->id.empty()) {
                 elementMap[group->id] = std::move(group);
             } else {
-                group->applyTransformations();
+                group->applyTransformations(); // Apply group transformations once
                 svg_elements.push_back(group.release());
             }
         } else {
@@ -149,7 +149,7 @@ namespace svg {
             if (newElement) {
                 newElement->setTransformOrigin(newTransformOrigin);
                 parseTransform(*newElement, transform, newTransformOrigin);
-                newElement->applyTransformations();
+                newElement->applyTransformations(); // Apply transformations immediately after parsing
                 svg_elements.push_back(newElement);
 
                 const char* idAttr = element->Attribute("id");
@@ -160,6 +160,8 @@ namespace svg {
             }
         }
     }
+
+
 
     void readSVG(const string& svg_file, Point& dimensions, vector<SVGElement*>& svg_elements) {
         XMLDocument doc;

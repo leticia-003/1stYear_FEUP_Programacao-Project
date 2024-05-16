@@ -1,6 +1,7 @@
 #include "SVGElements.hpp"
 #include <iostream>
 #include <memory>
+using namespace std;
 
 namespace svg {
     SVGElement::SVGElement() {}
@@ -55,12 +56,22 @@ namespace svg {
 
     void Circle::draw(PNGImage& img) const {
         Point radiusPoint{radius, radius};
-        img.draw_ellipse(center, radiusPoint, fill);
+        if (center.x >= 0 && center.x < img.width() && center.y >= 0 && center.y < img.height()) {
+            cout << "Drawing Circle at (" << center.x << ", " << center.y << ") with radius " << radius << endl;
+            img.draw_ellipse(center, radiusPoint, fill);
+        } else {
+            cout << "Circle at (" << center.x << ", " << center.y << ") is out of image bounds and cannot be drawn." << endl;
+        }
     }
 
+
     void Circle::translate(const Point& translation) {
+        cout << "TRANSLAÇÕES X: " << translation.x << " TRANSLAÇÕES Y: " << translation.y << endl;
+        cout << "CENTER X: " << center.x << " CENTER Y: " << center.y << endl;
         center = center.translate(translation);
+        cout << "NEW CENTER X: " << center.x << " NEW CENTER Y: " << center.y << endl;
     }
+
 
     void Circle::scale(const Point& origin, int scaling_factor) {
         radius *= scaling_factor;
@@ -72,10 +83,14 @@ namespace svg {
     }
 
     void Circle::applyTransformations() {
+        cout << "Applying transformations to Circle at (" << center.x << ", " << center.y << ")" << endl;
         for (const auto& transform : transformations) {
             transform();
+            cout << "After transformation, Circle center: (" << center.x << ", " << center.y << ")" << endl;
         }
+        transformations.clear();
     }
+
 
     void Circle::setTransformOrigin(const Point& origin) {
         transformOrigin = origin;
@@ -264,11 +279,13 @@ namespace svg {
 
     SVGGroup::SVGGroup() {}
 
+
     void SVGGroup::draw(PNGImage& img) const {
         for (const auto& element : elements) {
             element->draw(img);
         }
     }
+
 
     void SVGGroup::translate(const Point& translation) {
         for (auto& element : elements) {
@@ -288,14 +305,13 @@ namespace svg {
         }
     }
 
-    void SVGGroup::applyTransformations() {
-        for (auto& element : elements) {
-            for (const auto& transform : transformations) {
-                element->addTransformation(transform);
-            }
-            element->applyTransformations();
+    void SVGGroup::applyTransformations(){
+        for (const auto& transform : transformations) {
+            transform();
         }
+        transformations.clear();
     }
+
 
     void SVGGroup::setTransformOrigin(const Point& origin) {
         transformOrigin = origin;
