@@ -142,10 +142,8 @@ namespace svg {
                 int height = element->IntAttribute("height");
                 string fill = element->Attribute("fill");
                 Color fillColor = parse_color(fill);
-                width -= 1;
-                height -= 1;
 
-                newElement = new Rectangle(fillColor, Point{x, y}, width, height);
+                newElement = new Rectangle(Point{x, y}, width, height, fillColor);
             }
 
             if (newElement) {

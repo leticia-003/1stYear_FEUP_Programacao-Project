@@ -148,27 +148,10 @@ namespace svg
         Point transformOrigin;
     };
 
-    class Rectangle : public SVGElement
+    class Rectangle: public Polygon
     {
     public:
-        Rectangle(const Color &fill, const Point &upper_left, int width, int height);
-
-        void draw(PNGImage &img) const override;
-        void translate(const Point &translation) override;
-        void scale(const Point &origin, int scaling_factor) override;
-        void rotate(const Point &origin, int degrees) override;
-
-        void applyTransformations() override;
-        void setTransformOrigin(const Point& origin) override;
-        void addTransformation(const std::function<void()>& transformation) override;
-        std::unique_ptr<SVGElement> clone() const override;
-
-    private:
-        Color fill;
-        Point upper_left;
-        int width;
-        int height;
-        Point transformOrigin;
+        Rectangle(const Point &topLeft, const int &width,const int &height, const Color &fill);
     };
 
     class SVGGroup : public SVGElement

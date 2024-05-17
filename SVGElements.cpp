@@ -232,52 +232,25 @@ namespace svg {
         return std::make_unique<Polygon>(*this);
     }
 
-    Rectangle::Rectangle(const Color& fill, const Point& upper_left, int width, int height)
-            : fill(fill), upper_left(upper_left), width(width), height(height) {}
+    std::vector<Point> rectangleCoordinates(const Point& topLeft, const int& width, const int& height){
+        Point topRight, bottomLeft, bottomRight;
+        std::vector<Point> coordinates;
+        topRight = Point({topLeft.x+(width-1),topLeft.y});
+        bottomLeft= Point({topLeft.x,topLeft.y+(height-1)});
+        bottomRight= Point({topLeft.x+(width-1),topLeft.y+(height-1)});
+        coordinates.push_back(topLeft);
+        coordinates.push_back(topRight);
+        coordinates.push_back(bottomRight);
+        coordinates.push_back(bottomLeft);
+        return coordinates;
 
-    void Rectangle::draw(PNGImage& img) const {
-        std::vector<Point> points_for_drawing{
-                {upper_left.x, upper_left.y},
-                {upper_left.x + width, upper_left.y},
-                {upper_left.x + width, upper_left.y + height},
-                {upper_left.x, upper_left.y + height}
-        };
-        img.draw_polygon(points_for_drawing, fill);
     }
 
-    void Rectangle::translate(const Point& translation) {
-        cout << "TRANSLAÇÕES X: " << translation.x << " TRANSLAÇÕES Y: " << translation.y << endl;
-        cout << "UPPER X: " << upper_left.x << " UPPER Y: " << upper_left.y << endl;
-        upper_left = upper_left.translate(translation);
+    Rectangle::Rectangle(const Point &topLeft, const int &width, const int &height, const Color &fill)
+    : Polygon(fill, (rectangleCoordinates(topLeft, width, height)))
+    {
     }
 
-    void Rectangle::scale(const Point& origin, int scaling_factor) {
-        upper_left = upper_left.scale(origin, scaling_factor);
-        width *= scaling_factor;
-        height *= scaling_factor;
-    }
-
-    void Rectangle::rotate(const Point& origin, int degrees) {
-        upper_left = upper_left.rotate(origin, degrees);
-    }
-
-    void Rectangle::applyTransformations() {
-        for (const auto& transform : transformations) {
-            transform();
-        }
-    }
-
-    void Rectangle::setTransformOrigin(const Point& origin) {
-        transformOrigin = origin;
-    }
-
-    void Rectangle::addTransformation(const std::function<void()>& transformation) {
-        transformations.push_back(transformation);
-    }
-
-    std::unique_ptr<SVGElement> Rectangle::clone() const {
-        return std::make_unique<Rectangle>(*this);
-    }
 
     SVGGroup::SVGGroup() {}
 
