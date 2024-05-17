@@ -10,6 +10,6 @@
 
 ## Accomplished tasks
 
-Brief summary of what you implemented.
+All tasks were successfully implemented, with only three tests of "use" failing.
 
 
