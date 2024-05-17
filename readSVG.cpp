@@ -89,8 +89,22 @@ namespace svg {
                 group->applyTransformations(); // Apply group transformations once
                 svg_elements.push_back(group.release());
             }
+        } else if (nodeName == "use") {
+            const char* href = element->Attribute("href");
+            if (href && href[0] == '#') {
+                string id = href + 1; // Skip the '#' character
+                auto it = elementMap.find(id);
+                if (it != elementMap.end()) {
+                    // Clone the referenced element
+                    auto clonedElement = it->second->clone();
+                    clonedElement->setTransformOrigin(newTransformOrigin);
+                    parseTransform(*clonedElement, transform, newTransformOrigin);
+                    clonedElement->applyTransformations(); // Apply transformations immediately after parsing
+                    svg_elements.push_back(clonedElement.release());
+                }
+            }
         } else {
-            SVGElement* newElement = nullptr;
+            unique_ptr<SVGElement> newElement;
 
             if (nodeName == "ellipse") {
                 int cx = element->IntAttribute("cx");
@@ -103,7 +117,7 @@ namespace svg {
                 Point center{cx, cy};
                 Point radius{rx, ry};
 
-                newElement = new Ellipse(fillColor, center, radius);
+                newElement = std::make_unique<Ellipse>(fillColor, center, radius);
             } else if (nodeName == "circle") {
                 int cx = element->IntAttribute("cx");
                 int cy = element->IntAttribute("cy");
@@ -111,14 +125,14 @@ namespace svg {
                 string fill = element->Attribute("fill");
                 Color fillColor = parse_color(fill);
 
-                newElement = new Circle(fillColor, Point{cx, cy}, r);
+                newElement = std::make_unique<Circle>(fillColor, Point{cx, cy}, r);
             } else if (nodeName == "polyline") {
                 string points_str = element->Attribute("points");
                 vector<Point> points = parse_points(points_str);
                 string stroke = element->Attribute("stroke");
                 Color strokeColor = parse_color(stroke);
 
-                newElement = new Polyline(strokeColor, points);
+                newElement = std::make_unique<Polyline>(strokeColor, points);
             } else if (nodeName == "line") {
                 int x1 = element->IntAttribute("x1");
                 int y1 = element->IntAttribute("y1");
@@ -127,14 +141,14 @@ namespace svg {
                 string stroke = element->Attribute("stroke") ? element->Attribute("stroke") : "black";
 
                 Color strokeColor = parse_color(stroke);
-                newElement = new Line(strokeColor, Point{x1, y1}, Point{x2, y2});
+                newElement = std::make_unique<Line>(strokeColor, Point{x1, y1}, Point{x2, y2});
             } else if (nodeName == "polygon") {
                 string points_str = element->Attribute("points");
                 vector<Point> points = parse_points(points_str);
                 string fill = element->Attribute("fill");
                 Color fillColor = parse_color(fill);
 
-                newElement = new Polygon(fillColor, points);
+                newElement = std::make_unique<Polygon>(fillColor, points);
             } else if (nodeName == "rect") {
                 int x = element->IntAttribute("x");
                 int y = element->IntAttribute("y");
@@ -143,23 +157,26 @@ namespace svg {
                 string fill = element->Attribute("fill");
                 Color fillColor = parse_color(fill);
 
-                newElement = new Rectangle(Point{x, y}, width, height, fillColor);
+                newElement = std::make_unique<Rectangle>(Point{x, y}, width, height, fillColor);
             }
 
             if (newElement) {
                 newElement->setTransformOrigin(newTransformOrigin);
                 parseTransform(*newElement, transform, newTransformOrigin);
                 newElement->applyTransformations(); // Apply transformations immediately after parsing
-                svg_elements.push_back(newElement);
 
                 const char* idAttr = element->Attribute("id");
                 if (idAttr) {
                     newElement->id = idAttr;
-                    elementMap[newElement->id] = std::unique_ptr<SVGElement>(newElement);
+                    elementMap[newElement->id] = std::move(newElement);
+                } else {
+                    // If no ID, manage the element in the local vector
+                    svg_elements.push_back(newElement.release());
                 }
             }
         }
     }
+
 
 
 
@@ -181,4 +198,5 @@ namespace svg {
             child = child->NextSiblingElement();
         }
     }
+
 }

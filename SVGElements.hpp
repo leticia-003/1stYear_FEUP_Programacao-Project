@@ -45,7 +45,7 @@ namespace svg
     public:
         Ellipse(const Color &fill, const Point &center, const Point &radius);
 
-        void draw(PNGImage &img) const override;
+        virtual void draw(PNGImage &img) const override;
         void translate(const Point &translation) override;
         void scale(const Point &origin, int scaling_factor) override;
         void rotate(const Point &origin, int degrees) override;
@@ -53,7 +53,7 @@ namespace svg
         void applyTransformations() override;
         void setTransformOrigin(const Point& origin) override;
         void addTransformation(const std::function<void()>& transformation) override;
-        std::unique_ptr<SVGElement> clone() const override;
+        virtual std::unique_ptr<SVGElement> clone() const override;
 
     private:
         Color fill;
@@ -67,7 +67,7 @@ namespace svg
     public:
         Circle(const Color &fill, const Point &center, int radius);
 
-        void draw(PNGImage &img) const override;
+        virtual void draw(PNGImage &img) const override;
         void translate(const Point &translation) override;
         void scale(const Point &origin, int scaling_factor) override;
         void rotate(const Point &origin, int degrees) override;
@@ -75,7 +75,7 @@ namespace svg
         void applyTransformations() override;
         void setTransformOrigin(const Point& origin) override;
         void addTransformation(const std::function<void()>& transformation) override;
-        std::unique_ptr<SVGElement> clone() const override;
+        virtual std::unique_ptr<SVGElement> clone() const override;
 
     private:
         Color fill;
@@ -97,7 +97,7 @@ namespace svg
         void applyTransformations() override;
         void setTransformOrigin(const Point& origin) override;
         void addTransformation(const std::function<void()>& transformation) override;
-        std::unique_ptr<SVGElement> clone() const override;
+        virtual std::unique_ptr<SVGElement> clone() const override;
 
     private:
         Color stroke;
@@ -118,7 +118,7 @@ namespace svg
         void applyTransformations() override;
         void setTransformOrigin(const Point& origin) override;
         void addTransformation(const std::function<void()>& transformation) override;
-        std::unique_ptr<SVGElement> clone() const override;
+        virtual std::unique_ptr<SVGElement> clone() const override;
 
     private:
         Color stroke;
@@ -140,7 +140,7 @@ namespace svg
         void applyTransformations() override;
         void setTransformOrigin(const Point& origin) override;
         void addTransformation(const std::function<void()>& transformation) override;
-        std::unique_ptr<SVGElement> clone() const override;
+        virtual std::unique_ptr<SVGElement> clone() const override;
 
     private:
         Color fill;
@@ -169,7 +169,7 @@ namespace svg
 
         void setTransformOrigin(const Point& origin) override;
         void addTransformation(const std::function<void()>& transformation) override;
-        std::unique_ptr<SVGElement> clone() const override;
+        virtual std::unique_ptr<SVGElement> clone() const override;
 
         void addElement(std::unique_ptr<SVGElement> element);
 

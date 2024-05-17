@@ -1,406 +1,95 @@
->>>> [1] batman <<<<
->>>> [2] batman_2 <<<<
->>>> [3] blank_1 <<<<
->>>> [4] blank_2 <<<<
->>>> [5] circle_1 <<<<
-Applying transformations to Circle at (100, 100)
-Drawing Circle at (100, 100) with radius 50
->>>> [6] circle_2 <<<<
-Applying transformations to Circle at (100, 100)
-Applying transformations to Circle at (100, 100)
-Applying transformations to Circle at (50, 50)
-Applying transformations to Circle at (50, 50)
-Applying transformations to Circle at (150, 50)
-Applying transformations to Circle at (150, 50)
-Applying transformations to Circle at (100, 150)
-Applying transformations to Circle at (100, 150)
-Drawing Circle at (100, 100) with radius 95
-Drawing Circle at (100, 100) with radius 80
-Drawing Circle at (50, 50) with radius 25
-Drawing Circle at (50, 50) with radius 10
-Drawing Circle at (150, 50) with radius 25
-Drawing Circle at (150, 50) with radius 10
-Drawing Circle at (100, 150) with radius 40
-Drawing Circle at (100, 150) with radius 30
->>>> [7] ellipse_1 <<<<
->>>> [8] ellipse_2 <<<<
->>>> [9] group_1 <<<<
-Applying transformations to Circle at (40, 40)
-Applying transformations to Circle at (60, 60)
-Drawing Circle at (40, 40) with radius 30
-Drawing Circle at (60, 60) with radius 30
->>>> [10] group_2 <<<<
-Applying transformations to Circle at (40, 40)
-Applying transformations to Circle at (60, 60)
-TRANSLAÇÕES X: -15 TRANSLAÇÕES Y: -15
-CENTER X: 40 CENTER Y: 40
-NEW CENTER X: 25 NEW CENTER Y: 25
-TRANSLAÇÕES X: -15 TRANSLAÇÕES Y: -15
-CENTER X: 60 CENTER Y: 60
-NEW CENTER X: 45 NEW CENTER Y: 45
-Drawing Circle at (25, 25) with radius 25
-Drawing Circle at (45, 45) with radius 25
->>>> [11] group_3 <<<<
-Applying transformations to Circle at (250, 250)
-Applying transformations to Circle at (250, 250)
-Applying transformations to Circle at (250, 250)
-Applying transformations to Circle at (250, 250)
-TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 10
-CENTER X: 250 CENTER Y: 250
-NEW CENTER X: 260 NEW CENTER Y: 260
-TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 10
-CENTER X: 250 CENTER Y: 250
-NEW CENTER X: 260 NEW CENTER Y: 260
-TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 10
-CENTER X: 250 CENTER Y: 250
-NEW CENTER X: 260 NEW CENTER Y: 260
-TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 10
-CENTER X: 250 CENTER Y: 250
-NEW CENTER X: 260 NEW CENTER Y: 260
-Drawing Circle at (260, 260) with radius 250
-Drawing Circle at (260, 260) with radius 200
-Drawing Circle at (260, 260) with radius 150
-Drawing Circle at (260, 260) with radius 100
->>>> [12] group_4 <<<<
-Applying transformations to Circle at (250, 250)
-Applying transformations to Circle at (250, 250)
-Applying transformations to Circle at (250, 250)
-Applying transformations to Circle at (250, 250)
-TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 10
-CENTER X: 250 CENTER Y: 250
-NEW CENTER X: 260 NEW CENTER Y: 260
-TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 10
-CENTER X: 250 CENTER Y: 250
-NEW CENTER X: 260 NEW CENTER Y: 260
-TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 10
-CENTER X: 250 CENTER Y: 250
-NEW CENTER X: 260 NEW CENTER Y: 260
-TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 10
-CENTER X: 250 CENTER Y: 250
-NEW CENTER X: 260 NEW CENTER Y: 260
-Drawing Circle at (260, 260) with radius 250
-Drawing Circle at (260, 260) with radius 200
-Drawing Circle at (260, 260) with radius 150
-Drawing Circle at (260, 260) with radius 100
->>>> [13] group_5 <<<<
-Applying transformations to Circle at (250, 250)
-Applying transformations to Circle at (250, 250)
-Applying transformations to Circle at (250, 250)
-TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 10
-CENTER X: 250 CENTER Y: 250
-NEW CENTER X: 260 NEW CENTER Y: 260
-TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 10
-CENTER X: 250 CENTER Y: 250
-NEW CENTER X: 260 NEW CENTER Y: 260
-TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 10
-CENTER X: 250 CENTER Y: 250
-NEW CENTER X: 260 NEW CENTER Y: 260
-Drawing Circle at (260, 260) with radius 250
-Drawing Circle at (260, 260) with radius 200
-Drawing Circle at (260, 260) with radius 150
->>>> [14] group_6 <<<<
->>>> [15] group_7 <<<<
->>>> [16] line_1 <<<<
->>>> [17] line_2 <<<<
->>>> [18] lion <<<<
->>>> [19] polygon_1 <<<<
->>>> [20] polygon_2 <<<<
->>>> [21] polyline_1 <<<<
->>>> [22] polyline_2 <<<<
->>>> [23] polyline_3 <<<<
->>>> [24] rect_1 <<<<
->>>> [25] rect_2 <<<<
->>>> [26] rect_3 <<<<
->>>> [27] rotate_circle <<<<
-Applying transformations to Circle at (200, 100)
-Applying transformations to Circle at (200, 100)
-After transformation, Circle center: (71, 212)
-Applying transformations to Circle at (300, 200)
-Applying transformations to Circle at (300, 200)
-After transformation, Circle center: (160, 323)
-Drawing Circle at (200, 100) with radius 50
-Drawing Circle at (71, 212) with radius 50
-Drawing Circle at (300, 200) with radius 75
-Drawing Circle at (160, 323) with radius 75
->>>> [28] rotate_circle_with_origin <<<<
-Applying transformations to Circle at (300, 300)
-Applying transformations to Circle at (300, 200)
-After transformation, Circle center: (371, 229)
-Applying transformations to Circle at (300, 200)
-After transformation, Circle center: (400, 300)
-Applying transformations to Circle at (300, 200)
-After transformation, Circle center: (371, 371)
-Applying transformations to Circle at (300, 200)
-After transformation, Circle center: (300, 400)
-Applying transformations to Circle at (300, 200)
-After transformation, Circle center: (229, 371)
-Applying transformations to Circle at (300, 200)
-After transformation, Circle center: (200, 300)
-Drawing Circle at (300, 300) with radius 220
-Drawing Circle at (371, 229) with radius 100
-Drawing Circle at (400, 300) with radius 100
-Drawing Circle at (371, 371) with radius 100
-Drawing Circle at (300, 400) with radius 100
-Drawing Circle at (229, 371) with radius 100
-Drawing Circle at (200, 300) with radius 100
->>>> [29] rotate_line <<<<
->>>> [30] rotate_line_with_origin <<<<
->>>> [31] rotate_polygon <<<<
->>>> [32] rotate_polygon_with_origin <<<<
->>>> [33] rotate_polyline <<<<
->>>> [34] rotate_polyline_with_origin <<<<
->>>> [35] rotate_rect <<<<
->>>> [36] rotate_rect_with_origin <<<<
->>>> [37] scale_circle <<<<
-Applying transformations to Circle at (30, 30)
-After transformation, Circle center: (240, 240)
-Applying transformations to Circle at (30, 30)
-After transformation, Circle center: (120, 120)
-Applying transformations to Circle at (30, 30)
-After transformation, Circle center: (60, 60)
-Applying transformations to Circle at (30, 30)
-Drawing Circle at (240, 240) with radius 160
-Drawing Circle at (120, 120) with radius 80
-Drawing Circle at (60, 60) with radius 40
-Drawing Circle at (30, 30) with radius 20
->>>> [38] scale_circle_with_origin <<<<
-Applying transformations to Circle at (300, 300)
-After transformation, Circle center: (300, 300)
-Applying transformations to Circle at (300, 300)
-After transformation, Circle center: (300, 300)
-Applying transformations to Circle at (300, 300)
-After transformation, Circle center: (300, 300)
-Applying transformations to Circle at (300, 300)
-After transformation, Circle center: (300, 300)
-Applying transformations to Circle at (300, 300)
-Drawing Circle at (300, 300) with radius 200
-Drawing Circle at (300, 300) with radius 160
-Drawing Circle at (300, 300) with radius 80
-Drawing Circle at (300, 300) with radius 40
-Drawing Circle at (300, 300) with radius 20
->>>> [39] scale_ellipse <<<<
->>>> [40] scale_ellipse_with_origin <<<<
->>>> [41] scale_line <<<<
->>>> [42] scale_line_with_origin <<<<
->>>> [43] scale_polygon <<<<
->>>> [44] scale_polygon_with_origin <<<<
->>>> [45] scale_polyline <<<<
->>>> [46] scale_polyline_with_origin <<<<
->>>> [47] scale_rect <<<<
->>>> [48] scale_rect_with_origin <<<<
->>>> [49] transform_several <<<<
->>>> [50] translate_circle <<<<
-Applying transformations to Circle at (25, 25)
-Applying transformations to Circle at (25, 25)
-TRANSLAÇÕES X: 50 TRANSLAÇÕES Y: 0
-CENTER X: 25 CENTER Y: 25
-NEW CENTER X: 75 NEW CENTER Y: 25
-After transformation, Circle center: (75, 25)
-Applying transformations to Circle at (25, 25)
-TRANSLAÇÕES X: 0 TRANSLAÇÕES Y: 50
-CENTER X: 25 CENTER Y: 25
-NEW CENTER X: 25 NEW CENTER Y: 75
-After transformation, Circle center: (25, 75)
-Applying transformations to Circle at (25, 25)
-TRANSLAÇÕES X: 50 TRANSLAÇÕES Y: 50
-CENTER X: 25 CENTER Y: 25
-NEW CENTER X: 75 NEW CENTER Y: 75
-After transformation, Circle center: (75, 75)
-Drawing Circle at (25, 25) with radius 25
-Drawing Circle at (75, 25) with radius 25
-Drawing Circle at (25, 75) with radius 25
-Drawing Circle at (75, 75) with radius 25
->>>> [51] translate_ellipse <<<<
->>>> [52] translate_line <<<<
->>>> [53] translate_polygon <<<<
->>>> [54] translate_polyline <<<<
->>>> [55] translate_rect <<<<
->>>> [56] use_1 <<<<
+>>>> [1] use_1 <<<<
 Applying transformations to Circle at (5, 5)
-convert.cpp:15:16: runtime error: member call on address 0x000108801a60 which does not point to an object of type 'svg::SVGElement'
-0x000108801a60: note: object has invalid vptr
- 00 00 00 00  79 00 00 00 00 00 00 00  6d 79 43 69 72 63 6c 65  00 00 00 00 00 00 00 00  00 00 00 00
-              ^~~~~~~~~~~~~~~~~~~~~~~
-              invalid vptr
-SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior convert.cpp:15:16 in 
-=================================================================
-==15184==ERROR: AddressSanitizer: heap-use-after-free on address 0x000108801a60 at pc 0x000105188688 bp 0x00016ae61e30 sp 0x00016ae61e28
-READ of size 8 at 0x000108801a60 thread T0
-    #0 0x105188684 in svg::convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) convert.cpp:15
-    #1 0x104fca5b8 in svg::TestDriver::run_conversion_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:41
-    #2 0x104faa8c8 in svg::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:102
-    #3 0x104fa05e0 in svg::TestDriver::run_tests(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:163
-    #4 0x104f9f478 in main test.cpp:181
-    #5 0x1990ae0dc  (<unknown module>)
-
-0x000108801a60 is located 0 bytes inside of 80-byte region [0x000108801a60,0x000108801ab0)
-freed by thread T0 here:
-    #0 0x105bd952c in wrap__ZdlPv+0x74 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x6152c)
-    #1 0x1050eb230 in svg::Circle::~Circle() SVGElements.hpp:65
-    #2 0x1050ffb00 in std::__1::default_delete<svg::SVGElement>::operator()[abi:v160006](svg::SVGElement*) const unique_ptr.h:65
-    #3 0x1050ff6f8 in std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>::reset[abi:v160006](svg::SVGElement*) unique_ptr.h:297
-    #4 0x1050ff448 in std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>::~unique_ptr[abi:v160006]() unique_ptr.h:263
-    #5 0x1050eaf5c in std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>::~unique_ptr[abi:v160006]() unique_ptr.h:263
-    #6 0x10515e3d0 in std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>::~pair() pair.h:63
-    #7 0x10515e354 in std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>::~pair() pair.h:63
-    #8 0x10515e2ac in void std::__1::allocator_traits<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, void*>>>::destroy[abi:v160006]<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, void, void>(std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, void*>>&, std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>*) allocator_traits.h:325
-    #9 0x105187f58 in std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>::destroy(std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, void*>*) __tree:1813
-    #10 0x105187b28 in std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>::~__tree() __tree:1801
-    #11 0x105187aa4 in std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>::~__tree() __tree:1798
-    #12 0x105187a2c in std::__1::map<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>::~map[abi:v160006]() map:1164
-    #13 0x105132cc8 in std::__1::map<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>::~map[abi:v160006]() map:1162
-    #14 0x10513296c in svg::readSVG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, svg::Point&, std::__1::vector<svg::SVGElement*, std::__1::allocator<svg::SVGElement*>>&) readSVG.cpp:185
-    #15 0x105188294 in svg::convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) convert.cpp:11
-    #16 0x104fca5b8 in svg::TestDriver::run_conversion_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:41
-    #17 0x104faa8c8 in svg::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:102
-    #18 0x104fa05e0 in svg::TestDriver::run_tests(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:163
-    #19 0x104f9f478 in main test.cpp:181
-    #20 0x1990ae0dc  (<unknown module>)
-
-previously allocated by thread T0 here:
-    #0 0x105bd90ec in wrap__Znwm+0x74 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x610ec)
-    #1 0x105129c78 in svg::parseSVGElement(tinyxml2::XMLElement*, svg::Point const&, std::__1::vector<svg::SVGElement*, std::__1::allocator<svg::SVGElement*>>&, std::__1::map<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>&) readSVG.cpp:114
-    #2 0x1051327ec in svg::readSVG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, svg::Point&, std::__1::vector<svg::SVGElement*, std::__1::allocator<svg::SVGElement*>>&) readSVG.cpp:182
-    #3 0x105188294 in svg::convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) convert.cpp:11
-    #4 0x104fca5b8 in svg::TestDriver::run_conversion_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:41
-    #5 0x104faa8c8 in svg::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:102
-    #6 0x104fa05e0 in svg::TestDriver::run_tests(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:163
-    #7 0x104f9f478 in main test.cpp:181
-    #8 0x1990ae0dc  (<unknown module>)
-
-SUMMARY: AddressSanitizer: heap-use-after-free convert.cpp:15 in svg::convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)
-Shadow bytes around the buggy address:
-  0x000108801780: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x000108801800: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x000108801880: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x000108801900: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x000108801980: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-=>0x000108801a00: fa fa fa fa fa fa fa fa fa fa fa fa[fd]fd fd fd
-  0x000108801a80: fd fd fd fd fd fd fa fa fa fa 00 00 00 00 00 00
-  0x000108801b00: 00 00 00 fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x000108801b80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x000108801c00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x000108801c80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-Shadow byte legend (one shadow byte represents 8 application bytes):
-  Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07 
-  Heap left redzone:       fa
-  Freed heap region:       fd
-  Stack left redzone:      f1
-  Stack mid redzone:       f2
-  Stack right redzone:     f3
-  Stack after return:      f5
-  Stack use after scope:   f8
-  Global redzone:          f9
-  Global init order:       f6
-  Poisoned by user:        f7
-  Container overflow:      fc
-  Array cookie:            ac
-  Intra object redzone:    bb
-  ASan internal:           fe
-  Left alloca redzone:     ca
-  Right alloca redzone:    cb
-==15184==ABORTING
->>>> [57] use_2 <<<<
+1Applying transformations to Circle at (5, 5)
+TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 0
+CENTER X: 5 CENTER Y: 5
+NEW CENTER X: 15 NEW CENTER Y: 5
+After transformation, Circle center: (15, 5)
+1Applying transformations to Circle at (5, 5)
+TRANSLAÇÕES X: 20 TRANSLAÇÕES Y: 0
+CENTER X: 5 CENTER Y: 5
+NEW CENTER X: 25 NEW CENTER Y: 5
+After transformation, Circle center: (25, 5)
+Drawing Circle at (15, 5) with radius 4
+Drawing Circle at (25, 5) with radius 4
+pixel (1 5): expected 255 0 0 got 255 255 255
+>>>> [2] use_2 <<<<
 Applying transformations to Circle at (40, 40)
 Applying transformations to Circle at (40, 40)
 TRANSLAÇÕES X: 50 TRANSLAÇÕES Y: 0
 CENTER X: 40 CENTER Y: 40
 NEW CENTER X: 90 NEW CENTER Y: 40
 After transformation, Circle center: (90, 40)
-convert.cpp:15:16: runtime error: member call on address 0x000108801a60 which does not point to an object of type 'svg::SVGElement'
-0x000108801a60: note: object has invalid vptr
- 00 00 00 00  7f 00 00 00 00 00 00 00  63 31 00 00 00 00 00 00  00 00 00 00 00 00 00 00  00 00 00 00
-              ^~~~~~~~~~~~~~~~~~~~~~~
-              invalid vptr
-SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior convert.cpp:15:16 in 
-=================================================================
-==15186==ERROR: AddressSanitizer: heap-use-after-free on address 0x000108801a60 at pc 0x000105188688 bp 0x00016ae61e30 sp 0x00016ae61e28
-READ of size 8 at 0x000108801a60 thread T0
-    #0 0x105188684 in svg::convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) convert.cpp:15
-    #1 0x104fca5b8 in svg::TestDriver::run_conversion_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:41
-    #2 0x104faa8c8 in svg::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:102
-    #3 0x104fa05e0 in svg::TestDriver::run_tests(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:163
-    #4 0x104f9f478 in main test.cpp:181
-    #5 0x1990ae0dc  (<unknown module>)
-
-0x000108801a60 is located 0 bytes inside of 80-byte region [0x000108801a60,0x000108801ab0)
-freed by thread T0 here:
-    #0 0x105bd952c in wrap__ZdlPv+0x74 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x6152c)
-    #1 0x1050eb230 in svg::Circle::~Circle() SVGElements.hpp:65
-    #2 0x1050ffb00 in std::__1::default_delete<svg::SVGElement>::operator()[abi:v160006](svg::SVGElement*) const unique_ptr.h:65
-    #3 0x1050ff6f8 in std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>::reset[abi:v160006](svg::SVGElement*) unique_ptr.h:297
-    #4 0x1050ff448 in std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>::~unique_ptr[abi:v160006]() unique_ptr.h:263
-    #5 0x1050eaf5c in std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>::~unique_ptr[abi:v160006]() unique_ptr.h:263
-    #6 0x10515e3d0 in std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>::~pair() pair.h:63
-    #7 0x10515e354 in std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>::~pair() pair.h:63
-    #8 0x10515e2ac in void std::__1::allocator_traits<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, void*>>>::destroy[abi:v160006]<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, void, void>(std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, void*>>&, std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>*) allocator_traits.h:325
-    #9 0x105187f58 in std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>::destroy(std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, void*>*) __tree:1813
-    #10 0x105187b28 in std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>::~__tree() __tree:1801
-    #11 0x105187aa4 in std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>::~__tree() __tree:1798
-    #12 0x105187a2c in std::__1::map<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>::~map[abi:v160006]() map:1164
-    #13 0x105132cc8 in std::__1::map<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>::~map[abi:v160006]() map:1162
-    #14 0x10513296c in svg::readSVG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, svg::Point&, std::__1::vector<svg::SVGElement*, std::__1::allocator<svg::SVGElement*>>&) readSVG.cpp:185
-    #15 0x105188294 in svg::convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) convert.cpp:11
-    #16 0x104fca5b8 in svg::TestDriver::run_conversion_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:41
-    #17 0x104faa8c8 in svg::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:102
-    #18 0x104fa05e0 in svg::TestDriver::run_tests(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:163
-    #19 0x104f9f478 in main test.cpp:181
-    #20 0x1990ae0dc  (<unknown module>)
-
-previously allocated by thread T0 here:
-    #0 0x105bd90ec in wrap__Znwm+0x74 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x610ec)
-    #1 0x105129c78 in svg::parseSVGElement(tinyxml2::XMLElement*, svg::Point const&, std::__1::vector<svg::SVGElement*, std::__1::allocator<svg::SVGElement*>>&, std::__1::map<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const, std::__1::unique_ptr<svg::SVGElement, std::__1::default_delete<svg::SVGElement>>>>>&) readSVG.cpp:114
-    #2 0x1051327ec in svg::readSVG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, svg::Point&, std::__1::vector<svg::SVGElement*, std::__1::allocator<svg::SVGElement*>>&) readSVG.cpp:182
-    #3 0x105188294 in svg::convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) convert.cpp:11
-    #4 0x104fca5b8 in svg::TestDriver::run_conversion_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:41
-    #5 0x104faa8c8 in svg::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:102
-    #6 0x104fa05e0 in svg::TestDriver::run_tests(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) test.cpp:163
-    #7 0x104f9f478 in main test.cpp:181
-    #8 0x1990ae0dc  (<unknown module>)
-
-SUMMARY: AddressSanitizer: heap-use-after-free convert.cpp:15 in svg::convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)
-Shadow bytes around the buggy address:
-  0x000108801780: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x000108801800: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x000108801880: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x000108801900: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x000108801980: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fd fd
-=>0x000108801a00: fd fd fd fd fd fd fd fd fa fa fa fa[fd]fd fd fd
-  0x000108801a80: fd fd fd fd fd fd fa fa fa fa 00 00 00 00 00 00
-  0x000108801b00: 00 00 00 fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x000108801b80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x000108801c00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x000108801c80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-Shadow byte legend (one shadow byte represents 8 application bytes):
-  Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07 
-  Heap left redzone:       fa
-  Freed heap region:       fd
-  Stack left redzone:      f1
-  Stack mid redzone:       f2
-  Stack right redzone:     f3
-  Stack after return:      f5
-  Stack use after scope:   f8
-  Global redzone:          f9
-  Global init order:       f6
-  Poisoned by user:        f7
-  Container overflow:      fc
-  Array cookie:            ac
-  Intra object redzone:    bb
-  ASan internal:           fe
-  Left alloca redzone:     ca
-  Right alloca redzone:    cb
-==15186==ABORTING
->>>> [58] use_3 <<<<
+1Applying transformations to Circle at (40, 40)
+TRANSLAÇÕES X: 50 TRANSLAÇÕES Y: 60
+CENTER X: 40 CENTER Y: 40
+NEW CENTER X: 90 NEW CENTER Y: 100
+After transformation, Circle center: (90, 100)
+1Applying transformations to Circle at (90, 40)
+TRANSLAÇÕES X: -50 TRANSLAÇÕES Y: 60
+CENTER X: 90 CENTER Y: 40
+NEW CENTER X: 40 NEW CENTER Y: 100
+After transformation, Circle center: (40, 100)
+1Drawing Circle at (90, 100) with radius 25
+Drawing Circle at (40, 100) with radius 25
+pixel (15 40): expected 255 0 0 got 255 255 255
+>>>> [3] use_3 <<<<
 Applying transformations to Circle at (250, 250)
 Applying transformations to Circle at (250, 250)
 Applying transformations to Circle at (250, 250)
 Applying transformations to Circle at (250, 250)
+1TRANSLAÇÕES X: 500 TRANSLAÇÕES Y: 0
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 750 NEW CENTER Y: 250
+TRANSLAÇÕES X: 500 TRANSLAÇÕES Y: 0
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 750 NEW CENTER Y: 250
+TRANSLAÇÕES X: 500 TRANSLAÇÕES Y: 0
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 750 NEW CENTER Y: 250
+TRANSLAÇÕES X: 500 TRANSLAÇÕES Y: 0
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 750 NEW CENTER Y: 250
+1TRANSLAÇÕES X: 0 TRANSLAÇÕES Y: 500
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 250 NEW CENTER Y: 750
+TRANSLAÇÕES X: 0 TRANSLAÇÕES Y: 500
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 250 NEW CENTER Y: 750
+TRANSLAÇÕES X: 0 TRANSLAÇÕES Y: 500
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 250 NEW CENTER Y: 750
+TRANSLAÇÕES X: 0 TRANSLAÇÕES Y: 500
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 250 NEW CENTER Y: 750
+1TRANSLAÇÕES X: 500 TRANSLAÇÕES Y: 500
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 750 NEW CENTER Y: 750
+TRANSLAÇÕES X: 500 TRANSLAÇÕES Y: 500
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 750 NEW CENTER Y: 750
+TRANSLAÇÕES X: 500 TRANSLAÇÕES Y: 500
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 750 NEW CENTER Y: 750
+TRANSLAÇÕES X: 500 TRANSLAÇÕES Y: 500
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 750 NEW CENTER Y: 750
+Drawing Circle at (750, 250) with radius 250
+Drawing Circle at (750, 250) with radius 200
+Drawing Circle at (750, 250) with radius 150
+Drawing Circle at (750, 250) with radius 100
+Drawing Circle at (250, 750) with radius 250
+Drawing Circle at (250, 750) with radius 200
+Drawing Circle at (250, 750) with radius 150
+Drawing Circle at (250, 750) with radius 100
+Drawing Circle at (750, 750) with radius 250
+Drawing Circle at (750, 750) with radius 200
+Drawing Circle at (750, 750) with radius 150
+Drawing Circle at (750, 750) with radius 100
 pixel (0 250): expected 255 0 0 got 255 255 255
->>>> [59] use_4 <<<<
-pixel (0 0): expected 255 0 0 got 255 255 255
->>>> [60] use_5 <<<<
-pixel (51 51): expected 0 255 0 got 255 255 255
->>>> [61] use_6 <<<<
-pixel (0 0): expected 0 0 0 got 255 255 255
+>>>> [4] use_4 <<<<
+111pixel (0 0): expected 255 0 0 got 255 255 255
+>>>> [5] use_5 <<<<
+11pixel (51 51): expected 0 255 0 got 255 255 255
+>>>> [6] use_6 <<<<
+11111pixel (0 0): expected 0 0 0 got 255 255 255
