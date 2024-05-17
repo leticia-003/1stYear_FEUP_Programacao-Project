@@ -1,6 +1,7 @@
 #include <iostream>
 #include "SVGElements.hpp"
 #include "external/tinyxml2/tinyxml2.h"
+#include <algorithm>
 #include <sstream>
 #include <map>
 #include <memory>
