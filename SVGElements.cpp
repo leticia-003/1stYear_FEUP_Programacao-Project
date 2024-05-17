@@ -57,19 +57,13 @@ namespace svg {
     void Circle::draw(PNGImage& img) const {
         Point radiusPoint{radius, radius};
         if (center.x >= 0 && center.x < img.width() && center.y >= 0 && center.y < img.height()) {
-            cout << "Drawing Circle at (" << center.x << ", " << center.y << ") with radius " << radius << endl;
             img.draw_ellipse(center, radiusPoint, fill);
-        } else {
-            cout << "Circle at (" << center.x << ", " << center.y << ") is out of image bounds and cannot be drawn." << endl;
         }
     }
 
 
     void Circle::translate(const Point& translation) {
-        cout << "TRANSLAÇÕES X: " << translation.x << " TRANSLAÇÕES Y: " << translation.y << endl;
-        cout << "CENTER X: " << center.x << " CENTER Y: " << center.y << endl;
         center = center.translate(translation);
-        cout << "NEW CENTER X: " << center.x << " NEW CENTER Y: " << center.y << endl;
     }
 
 
@@ -83,10 +77,8 @@ namespace svg {
     }
 
     void Circle::applyTransformations() {
-        cout << "Applying transformations to Circle at (" << center.x << ", " << center.y << ")" << endl;
         for (const auto& transform : transformations) {
             transform();
-            cout << "After transformation, Circle center: (" << center.x << ", " << center.y << ")" << endl;
         }
         transformations.clear();
     }
