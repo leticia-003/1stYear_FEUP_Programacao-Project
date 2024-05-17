@@ -38,7 +38,8 @@ namespace svg {
                 size_t pos = operation.find('(');
                 if (pos != string::npos) {
                     string translateString = operation.substr(pos + 1);
-                    translateString.erase(remove(translateString.begin(), translateString.end(), ','), translateString.end());
+                    // Replace commas with spaces to handle both cases
+                    replace(translateString.begin(), translateString.end(), ',', ' ');
                     istringstream iss(translateString);
                     iss >> x >> y;
                     element.addTransformation([=, &element]() { element.translate({x, y}); });
@@ -54,6 +55,7 @@ namespace svg {
             }
         }
     }
+
 
     void parseSVGElement(XMLElement* element, const Point& transformOrigin, vector<SVGElement*>& svg_elements, map<string, unique_ptr<SVGElement>>& elementMap) {
         const string nodeName = element->Name();

@@ -246,6 +246,8 @@ namespace svg {
     }
 
     void Rectangle::translate(const Point& translation) {
+        cout << "TRANSLAÇÕES X: " << translation.x << " TRANSLAÇÕES Y: " << translation.y << endl;
+        cout << "UPPER X: " << upper_left.x << " UPPER Y: " << upper_left.y << endl;
         upper_left = upper_left.translate(translation);
     }
 
