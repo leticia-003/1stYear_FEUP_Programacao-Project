@@ -1,11 +1,228 @@
->>>> [1] use_1 <<<<
+>>>> [1] batman <<<<
+>>>> [2] batman_2 <<<<
+>>>> [3] blank_1 <<<<
+>>>> [4] blank_2 <<<<
+>>>> [5] circle_1 <<<<
+Applying transformations to Circle at (100, 100)
+Drawing Circle at (100, 100) with radius 50
+>>>> [6] circle_2 <<<<
+Applying transformations to Circle at (100, 100)
+Applying transformations to Circle at (100, 100)
+Applying transformations to Circle at (50, 50)
+Applying transformations to Circle at (50, 50)
+Applying transformations to Circle at (150, 50)
+Applying transformations to Circle at (150, 50)
+Applying transformations to Circle at (100, 150)
+Applying transformations to Circle at (100, 150)
+Drawing Circle at (100, 100) with radius 95
+Drawing Circle at (100, 100) with radius 80
+Drawing Circle at (50, 50) with radius 25
+Drawing Circle at (50, 50) with radius 10
+Drawing Circle at (150, 50) with radius 25
+Drawing Circle at (150, 50) with radius 10
+Drawing Circle at (100, 150) with radius 40
+Drawing Circle at (100, 150) with radius 30
+>>>> [7] ellipse_1 <<<<
+>>>> [8] ellipse_2 <<<<
+>>>> [9] group_1 <<<<
+Applying transformations to Circle at (40, 40)
+Applying transformations to Circle at (60, 60)
+Drawing Circle at (40, 40) with radius 30
+Drawing Circle at (60, 60) with radius 30
+>>>> [10] group_2 <<<<
+Applying transformations to Circle at (40, 40)
+Applying transformations to Circle at (60, 60)
+TRANSLAÇÕES X: -15 TRANSLAÇÕES Y: -15
+CENTER X: 40 CENTER Y: 40
+NEW CENTER X: 25 NEW CENTER Y: 25
+TRANSLAÇÕES X: -15 TRANSLAÇÕES Y: -15
+CENTER X: 60 CENTER Y: 60
+NEW CENTER X: 45 NEW CENTER Y: 45
+Drawing Circle at (25, 25) with radius 25
+Drawing Circle at (45, 45) with radius 25
+>>>> [11] group_3 <<<<
+Applying transformations to Circle at (250, 250)
+Applying transformations to Circle at (250, 250)
+Applying transformations to Circle at (250, 250)
+Applying transformations to Circle at (250, 250)
+TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 10
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 260 NEW CENTER Y: 260
+TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 10
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 260 NEW CENTER Y: 260
+TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 10
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 260 NEW CENTER Y: 260
+TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 10
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 260 NEW CENTER Y: 260
+Drawing Circle at (260, 260) with radius 250
+Drawing Circle at (260, 260) with radius 200
+Drawing Circle at (260, 260) with radius 150
+Drawing Circle at (260, 260) with radius 100
+>>>> [12] group_4 <<<<
+Applying transformations to Circle at (250, 250)
+Applying transformations to Circle at (250, 250)
+Applying transformations to Circle at (250, 250)
+Applying transformations to Circle at (250, 250)
+TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 10
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 260 NEW CENTER Y: 260
+TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 10
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 260 NEW CENTER Y: 260
+TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 10
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 260 NEW CENTER Y: 260
+TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 10
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 260 NEW CENTER Y: 260
+Drawing Circle at (260, 260) with radius 250
+Drawing Circle at (260, 260) with radius 200
+Drawing Circle at (260, 260) with radius 150
+Drawing Circle at (260, 260) with radius 100
+>>>> [13] group_5 <<<<
+Applying transformations to Circle at (250, 250)
+Applying transformations to Circle at (250, 250)
+Applying transformations to Circle at (250, 250)
+TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 10
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 260 NEW CENTER Y: 260
+TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 10
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 260 NEW CENTER Y: 260
+TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 10
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 260 NEW CENTER Y: 260
+Drawing Circle at (260, 260) with radius 250
+Drawing Circle at (260, 260) with radius 200
+Drawing Circle at (260, 260) with radius 150
+>>>> [14] group_6 <<<<
+>>>> [15] group_7 <<<<
+>>>> [16] line_1 <<<<
+>>>> [17] line_2 <<<<
+>>>> [18] lion <<<<
+>>>> [19] polygon_1 <<<<
+>>>> [20] polygon_2 <<<<
+>>>> [21] polyline_1 <<<<
+>>>> [22] polyline_2 <<<<
+>>>> [23] polyline_3 <<<<
+>>>> [24] rect_1 <<<<
+>>>> [25] rect_2 <<<<
+>>>> [26] rect_3 <<<<
+>>>> [27] rotate_circle <<<<
+Applying transformations to Circle at (200, 100)
+Applying transformations to Circle at (200, 100)
+After transformation, Circle center: (71, 212)
+Applying transformations to Circle at (300, 200)
+Applying transformations to Circle at (300, 200)
+After transformation, Circle center: (160, 323)
+Drawing Circle at (200, 100) with radius 50
+Drawing Circle at (71, 212) with radius 50
+Drawing Circle at (300, 200) with radius 75
+Drawing Circle at (160, 323) with radius 75
+>>>> [28] rotate_circle_with_origin <<<<
+Applying transformations to Circle at (300, 300)
+Applying transformations to Circle at (300, 200)
+After transformation, Circle center: (371, 229)
+Applying transformations to Circle at (300, 200)
+After transformation, Circle center: (400, 300)
+Applying transformations to Circle at (300, 200)
+After transformation, Circle center: (371, 371)
+Applying transformations to Circle at (300, 200)
+After transformation, Circle center: (300, 400)
+Applying transformations to Circle at (300, 200)
+After transformation, Circle center: (229, 371)
+Applying transformations to Circle at (300, 200)
+After transformation, Circle center: (200, 300)
+Drawing Circle at (300, 300) with radius 220
+Drawing Circle at (371, 229) with radius 100
+Drawing Circle at (400, 300) with radius 100
+Drawing Circle at (371, 371) with radius 100
+Drawing Circle at (300, 400) with radius 100
+Drawing Circle at (229, 371) with radius 100
+Drawing Circle at (200, 300) with radius 100
+>>>> [29] rotate_line <<<<
+>>>> [30] rotate_line_with_origin <<<<
+>>>> [31] rotate_polygon <<<<
+>>>> [32] rotate_polygon_with_origin <<<<
+>>>> [33] rotate_polyline <<<<
+>>>> [34] rotate_polyline_with_origin <<<<
+>>>> [35] rotate_rect <<<<
+>>>> [36] rotate_rect_with_origin <<<<
+>>>> [37] scale_circle <<<<
+Applying transformations to Circle at (30, 30)
+After transformation, Circle center: (240, 240)
+Applying transformations to Circle at (30, 30)
+After transformation, Circle center: (120, 120)
+Applying transformations to Circle at (30, 30)
+After transformation, Circle center: (60, 60)
+Applying transformations to Circle at (30, 30)
+Drawing Circle at (240, 240) with radius 160
+Drawing Circle at (120, 120) with radius 80
+Drawing Circle at (60, 60) with radius 40
+Drawing Circle at (30, 30) with radius 20
+>>>> [38] scale_circle_with_origin <<<<
+Applying transformations to Circle at (300, 300)
+After transformation, Circle center: (300, 300)
+Applying transformations to Circle at (300, 300)
+After transformation, Circle center: (300, 300)
+Applying transformations to Circle at (300, 300)
+After transformation, Circle center: (300, 300)
+Applying transformations to Circle at (300, 300)
+After transformation, Circle center: (300, 300)
+Applying transformations to Circle at (300, 300)
+Drawing Circle at (300, 300) with radius 200
+Drawing Circle at (300, 300) with radius 160
+Drawing Circle at (300, 300) with radius 80
+Drawing Circle at (300, 300) with radius 40
+Drawing Circle at (300, 300) with radius 20
+>>>> [39] scale_ellipse <<<<
+>>>> [40] scale_ellipse_with_origin <<<<
+>>>> [41] scale_line <<<<
+>>>> [42] scale_line_with_origin <<<<
+>>>> [43] scale_polygon <<<<
+>>>> [44] scale_polygon_with_origin <<<<
+>>>> [45] scale_polyline <<<<
+>>>> [46] scale_polyline_with_origin <<<<
+>>>> [47] scale_rect <<<<
+>>>> [48] scale_rect_with_origin <<<<
+>>>> [49] transform_several <<<<
+>>>> [50] translate_circle <<<<
+Applying transformations to Circle at (25, 25)
+Applying transformations to Circle at (25, 25)
+TRANSLAÇÕES X: 50 TRANSLAÇÕES Y: 0
+CENTER X: 25 CENTER Y: 25
+NEW CENTER X: 75 NEW CENTER Y: 25
+After transformation, Circle center: (75, 25)
+Applying transformations to Circle at (25, 25)
+TRANSLAÇÕES X: 0 TRANSLAÇÕES Y: 50
+CENTER X: 25 CENTER Y: 25
+NEW CENTER X: 25 NEW CENTER Y: 75
+After transformation, Circle center: (25, 75)
+Applying transformations to Circle at (25, 25)
+TRANSLAÇÕES X: 50 TRANSLAÇÕES Y: 50
+CENTER X: 25 CENTER Y: 25
+NEW CENTER X: 75 NEW CENTER Y: 75
+After transformation, Circle center: (75, 75)
+Drawing Circle at (25, 25) with radius 25
+Drawing Circle at (75, 25) with radius 25
+Drawing Circle at (25, 75) with radius 25
+Drawing Circle at (75, 75) with radius 25
+>>>> [51] translate_ellipse <<<<
+>>>> [52] translate_line <<<<
+>>>> [53] translate_polygon <<<<
+>>>> [54] translate_polyline <<<<
+>>>> [55] translate_rect <<<<
+>>>> [56] use_1 <<<<
 Applying transformations to Circle at (5, 5)
-1Applying transformations to Circle at (5, 5)
+Applying transformations to Circle at (5, 5)
 TRANSLAÇÕES X: 10 TRANSLAÇÕES Y: 0
 CENTER X: 5 CENTER Y: 5
 NEW CENTER X: 15 NEW CENTER Y: 5
 After transformation, Circle center: (15, 5)
-1Applying transformations to Circle at (5, 5)
+Applying transformations to Circle at (5, 5)
 TRANSLAÇÕES X: 20 TRANSLAÇÕES Y: 0
 CENTER X: 5 CENTER Y: 5
 NEW CENTER X: 25 NEW CENTER Y: 5
@@ -13,34 +230,31 @@ After transformation, Circle center: (25, 5)
 Drawing Circle at (15, 5) with radius 4
 Drawing Circle at (25, 5) with radius 4
 pixel (1 5): expected 255 0 0 got 255 255 255
->>>> [2] use_2 <<<<
+>>>> [57] use_2 <<<<
 Applying transformations to Circle at (40, 40)
 Applying transformations to Circle at (40, 40)
 TRANSLAÇÕES X: 50 TRANSLAÇÕES Y: 0
 CENTER X: 40 CENTER Y: 40
 NEW CENTER X: 90 NEW CENTER Y: 40
 After transformation, Circle center: (90, 40)
-1Applying transformations to Circle at (40, 40)
+Applying transformations to Circle at (40, 40)
 TRANSLAÇÕES X: 50 TRANSLAÇÕES Y: 60
 CENTER X: 40 CENTER Y: 40
 NEW CENTER X: 90 NEW CENTER Y: 100
 After transformation, Circle center: (90, 100)
-1Applying transformations to Circle at (90, 40)
+Applying transformations to Circle at (90, 40)
 TRANSLAÇÕES X: -50 TRANSLAÇÕES Y: 60
 CENTER X: 90 CENTER Y: 40
 NEW CENTER X: 40 NEW CENTER Y: 100
 After transformation, Circle center: (40, 100)
-1Drawing Circle at (90, 100) with radius 25
+Drawing Circle at (90, 100) with radius 25
 Drawing Circle at (40, 100) with radius 25
 pixel (15 40): expected 255 0 0 got 255 255 255
->>>> [3] use_3 <<<<
+>>>> [58] use_3 <<<<
 Applying transformations to Circle at (250, 250)
 Applying transformations to Circle at (250, 250)
 Applying transformations to Circle at (250, 250)
 Applying transformations to Circle at (250, 250)
-1TRANSLAÇÕES X: 500 TRANSLAÇÕES Y: 0
-CENTER X: 250 CENTER Y: 250
-NEW CENTER X: 750 NEW CENTER Y: 250
 TRANSLAÇÕES X: 500 TRANSLAÇÕES Y: 0
 CENTER X: 250 CENTER Y: 250
 NEW CENTER X: 750 NEW CENTER Y: 250
@@ -50,9 +264,9 @@ NEW CENTER X: 750 NEW CENTER Y: 250
 TRANSLAÇÕES X: 500 TRANSLAÇÕES Y: 0
 CENTER X: 250 CENTER Y: 250
 NEW CENTER X: 750 NEW CENTER Y: 250
-1TRANSLAÇÕES X: 0 TRANSLAÇÕES Y: 500
+TRANSLAÇÕES X: 500 TRANSLAÇÕES Y: 0
 CENTER X: 250 CENTER Y: 250
-NEW CENTER X: 250 NEW CENTER Y: 750
+NEW CENTER X: 750 NEW CENTER Y: 250
 TRANSLAÇÕES X: 0 TRANSLAÇÕES Y: 500
 CENTER X: 250 CENTER Y: 250
 NEW CENTER X: 250 NEW CENTER Y: 750
@@ -62,9 +276,9 @@ NEW CENTER X: 250 NEW CENTER Y: 750
 TRANSLAÇÕES X: 0 TRANSLAÇÕES Y: 500
 CENTER X: 250 CENTER Y: 250
 NEW CENTER X: 250 NEW CENTER Y: 750
-1TRANSLAÇÕES X: 500 TRANSLAÇÕES Y: 500
+TRANSLAÇÕES X: 0 TRANSLAÇÕES Y: 500
 CENTER X: 250 CENTER Y: 250
-NEW CENTER X: 750 NEW CENTER Y: 750
+NEW CENTER X: 250 NEW CENTER Y: 750
 TRANSLAÇÕES X: 500 TRANSLAÇÕES Y: 500
 CENTER X: 250 CENTER Y: 250
 NEW CENTER X: 750 NEW CENTER Y: 750
@@ -74,6 +288,13 @@ NEW CENTER X: 750 NEW CENTER Y: 750
 TRANSLAÇÕES X: 500 TRANSLAÇÕES Y: 500
 CENTER X: 250 CENTER Y: 250
 NEW CENTER X: 750 NEW CENTER Y: 750
+TRANSLAÇÕES X: 500 TRANSLAÇÕES Y: 500
+CENTER X: 250 CENTER Y: 250
+NEW CENTER X: 750 NEW CENTER Y: 750
+Drawing Circle at (250, 250) with radius 250
+Drawing Circle at (250, 250) with radius 200
+Drawing Circle at (250, 250) with radius 150
+Drawing Circle at (250, 250) with radius 100
 Drawing Circle at (750, 250) with radius 250
 Drawing Circle at (750, 250) with radius 200
 Drawing Circle at (750, 250) with radius 150
@@ -86,10 +307,7 @@ Drawing Circle at (750, 750) with radius 250
 Drawing Circle at (750, 750) with radius 200
 Drawing Circle at (750, 750) with radius 150
 Drawing Circle at (750, 750) with radius 100
-pixel (0 250): expected 255 0 0 got 255 255 255
->>>> [4] use_4 <<<<
-111pixel (0 0): expected 255 0 0 got 255 255 255
->>>> [5] use_5 <<<<
-11pixel (51 51): expected 0 255 0 got 255 255 255
->>>> [6] use_6 <<<<
-11111pixel (0 0): expected 0 0 0 got 255 255 255
+>>>> [59] use_4 <<<<
+>>>> [60] use_5 <<<<
+>>>> [61] use_6 <<<<
+pixel (266 346): expected 0 0 255 got 255 255 255

@@ -83,12 +83,17 @@ namespace svg {
                 child = child->NextSiblingElement();
             }
 
+            group->applyTransformations();
+
             if (!group->id.empty()) {
+                auto clonedGroup = group->clone();  // Clone before moving the unique_ptr to the map
+                svg_elements.push_back(clonedGroup.release());
                 elementMap[group->id] = std::move(group);
-            } else {
-                group->applyTransformations(); // Apply group transformations once
+            }
+            else {
                 svg_elements.push_back(group.release());
             }
+
         } else if (nodeName == "use") {
             const char* href = element->Attribute("href");
             if (href && href[0] == '#') {
