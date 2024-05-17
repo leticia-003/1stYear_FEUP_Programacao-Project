@@ -9,25 +9,28 @@
 using namespace std;
 using namespace tinyxml2;
 
-namespace svg {
-
+namespace svg
+{
     vector<Point> parse_points(const string& points_str) {
         vector<Point> points;
         stringstream ss(points_str);
         char c;
         Point p;
 
+        // Read each point, ignoring commas
         while (ss >> p.x) {
-            ss >> c;
-            if (ss.peek() == ',') ss.ignore();
+            ss >> c; // This should read the comma separator
+            if (ss.peek() == ',') ss.ignore(); // If next character is a comma, ignore it
             ss >> p.y;
             points.push_back(p);
+            // Skip all consecutive commas and whitespace
             while (isspace(ss.peek()) || ss.peek() == ',') ss.ignore();
         }
 
         return points;
     }
 
+    // Function to parse transformation operations and apply them to an SVG element
     template<typename T>
     void parseTransform(T& element, const string& transform, const Point& transformOrigin) {
         stringstream ss(transform);
@@ -57,23 +60,24 @@ namespace svg {
         }
     }
 
-
     void parseSVGElement(XMLElement* element, const Point& transformOrigin, vector<SVGElement*>& svg_elements, map<string, unique_ptr<SVGElement>>& elementMap) {
         const string nodeName = element->Name();
         const char* attrValue = element->Attribute("transform");
-        string transform = attrValue ? attrValue : "";
+        string transform = attrValue ? attrValue : ""; // Use empty string if null
 
         Point newTransformOrigin = transformOrigin;
 
         const char* originAttr = element->Attribute("transform-origin");
-        string transformOriginStr = originAttr ? originAttr : "0 0";
+        string transformOriginStr = originAttr ? originAttr : "0 0";  // Provide a default "0 0" if not present
         sscanf(transformOriginStr.c_str(), "%d %d", &newTransformOrigin.x, &newTransformOrigin.y);
 
+        // Handle different types of SVG elements
         if (nodeName == "g") {
             auto group = std::make_unique<SVGGroup>();
             group->id = element->Attribute("id") ? element->Attribute("id") : "";
             parseTransform(*group, transform, newTransformOrigin);
 
+            // Process child elements of the group
             XMLElement* child = element->FirstChildElement();
             while (child != nullptr) {
                 vector<SVGElement*> childElements;
@@ -86,6 +90,7 @@ namespace svg {
 
             group->applyTransformations();
 
+            // Add the group to the SVG elements vector and element map
             if (!group->id.empty()) {
                 auto clonedGroup = group->clone();  // Clone before moving the unique_ptr to the map
                 svg_elements.push_back(clonedGroup.release());
@@ -111,7 +116,7 @@ namespace svg {
             }
         } else {
             unique_ptr<SVGElement> newElement;
-
+            // Determine SVG element type 
             if (nodeName == "ellipse") {
                 int cx = element->IntAttribute("cx");
                 int cy = element->IntAttribute("cy");
@@ -182,9 +187,6 @@ namespace svg {
             }
         }
     }
-
-
-
 
     void readSVG(const string& svg_file, Point& dimensions, vector<SVGElement*>& svg_elements) {
         XMLDocument doc;

@@ -7,10 +7,12 @@ namespace svg {
     SVGElement::SVGElement() {}
     SVGElement::~SVGElement() {}
 
+    // Add a transformation to the element
     void SVGElement::addTransformation(const std::function<void()>& transformation) {
         transformations.push_back(transformation);
     }
-
+    
+     // Implementation for Ellipse
     Ellipse::Ellipse(const Color& fill, const Point& center, const Point& radius)
             : fill(fill), center(center), radius(radius) {}
 
@@ -51,6 +53,7 @@ namespace svg {
         return std::make_unique<Ellipse>(*this);
     }
 
+    // Implementation for Circle
     Circle::Circle(const Color& fill, const Point& center, int radius)
             : fill(fill), center(center), radius(radius) {}
 
@@ -61,11 +64,9 @@ namespace svg {
         }
     }
 
-
     void Circle::translate(const Point& translation) {
         center = center.translate(translation);
     }
-
 
     void Circle::scale(const Point& origin, int scaling_factor) {
         radius *= scaling_factor;
@@ -83,7 +84,6 @@ namespace svg {
         transformations.clear();
     }
 
-
     void Circle::setTransformOrigin(const Point& origin) {
         transformOrigin = origin;
     }
@@ -96,6 +96,7 @@ namespace svg {
         return std::make_unique<Circle>(*this);
     }
 
+    // Implementation for Polyline
     Polyline::Polyline(const Color& stroke, const std::vector<Point>& points)
             : stroke(stroke), points(points) {}
 
@@ -141,6 +142,7 @@ namespace svg {
         return std::make_unique<Polyline>(*this);
     }
 
+    // Implementation for Line
     Line::Line(const Color& stroke, const Point& start, const Point& end)
             : stroke(stroke), start(start), end(end) {}
 
@@ -181,6 +183,7 @@ namespace svg {
         return std::make_unique<Line>(*this);
     }
 
+    // Implementation for Polygon
     Polygon::Polygon(const Color& fill, const std::vector<Point>& points)
             : fill(fill), points(points) {}
 
@@ -224,6 +227,7 @@ namespace svg {
         return std::make_unique<Polygon>(*this);
     }
 
+    // Implementation for Rectangle 
     std::vector<Point> rectangleCoordinates(const Point& topLeft, const int& width, const int& height){
         Point topRight, bottomLeft, bottomRight;
         std::vector<Point> coordinates;
@@ -235,24 +239,20 @@ namespace svg {
         coordinates.push_back(bottomRight);
         coordinates.push_back(bottomLeft);
         return coordinates;
-
     }
 
     Rectangle::Rectangle(const Point &topLeft, const int &width, const int &height, const Color &fill)
-    : Polygon(fill, (rectangleCoordinates(topLeft, width, height)))
-    {
-    }
+    : Polygon(fill, (rectangleCoordinates(topLeft, width, height))){}
 
 
+    // Implementation for Group
     SVGGroup::SVGGroup() {}
-
 
     void SVGGroup::draw(PNGImage& img) const {
         for (const auto& element : elements) {
             element->draw(img);
         }
     }
-
 
     void SVGGroup::translate(const Point& translation) {
         for (auto& element : elements) {
@@ -278,7 +278,6 @@ namespace svg {
         }
         transformations.clear();
     }
-
 
     void SVGGroup::setTransformOrigin(const Point& origin) {
         transformOrigin = origin;
