@@ -1,5 +1,5 @@
 
-# Programming project
+# Programming Project
 
 ## Group elements
 
